@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-briantarboxwebsite-dev-122627-authRole",
+      "UnauthRoleArn": "arn:aws:iam::747458360727:role/amplify-briantarboxwebsite-dev-122627-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::747458360727:role/amplify-briantarboxwebsite-dev-122627-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-briantarboxwebsite-dev-122627-deployment",
+      "UnauthRoleName": "amplify-briantarboxwebsite-dev-122627-unauthRole",
+      "StackName": "amplify-briantarboxwebsite-dev-122627",
+      "StackId": "arn:aws:cloudformation:us-east-1:747458360727:stack/amplify-briantarboxwebsite-dev-122627/10e6df60-fbe2-11ed-995a-0a835979170b",
+      "AmplifyAppId": "d3h9pu30xsh5f7"
+    }
+  }
+}
