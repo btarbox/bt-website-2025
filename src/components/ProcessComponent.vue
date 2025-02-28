@@ -37,6 +37,8 @@
                   <p>
                     Harness the power of diversity and inclusion in your organization. I'll work alongside you to foster an inclusive tech environment, championing equal opportunities and empowering underrepresented groups.
                     <br/><br/> In 2021 58% of the speakers at the User Group I organize were not white men.
+                    <br/><br/> I am the co-leader of Caylent's Employee Resource Group for those who identify as Neurodivergent.
+We work to make all of our coworkers feel included and valued"
                   </p>
                 </div>
               </div>

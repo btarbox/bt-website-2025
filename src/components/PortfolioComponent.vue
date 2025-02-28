@@ -1219,6 +1219,8 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <p>
               Over the years I've been published in a variety of places
             </p>
+            <a href="https://caylent.com/blog/werner-vogels-keynote-recap-aws-re-invent-2023">December 2023, <em>Werner Vogels Keynote Recap</em></a>
+            <br><br>
             <a href="https://dev.to/btarbox/the-future-of-alexa-skills-211j">October 2023, <em>The Future Of Alexa Skills</em></a>
             <br><br>
             I was quoted in a Financials Times article about Amazon Alexa
