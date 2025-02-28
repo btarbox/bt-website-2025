@@ -59,7 +59,6 @@
               <img
                 class="skills foo anim_moveBottom"
                 src='/img/badges/aws-ambassador.png' alt=""/>
-              <img 
               <img
                 class="skills illustrator anim_moveBottom"
                 src='/img/badges/AlexaChampions.png' alt=""/>
