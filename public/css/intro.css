@@ -675,6 +675,11 @@ h6 {
   bottom: 60px;
   left: 140px;
 }
+.dizme_tm_hero .skills.foo {
+  background-color: #fff;
+  bottom: 60px;
+  right: 70px;
+}
 .dizme_tm_hero .skills .svg {
   position: absolute;
   top: 50%;
