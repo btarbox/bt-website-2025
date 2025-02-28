@@ -33,7 +33,7 @@
             </div>
             <div class="text wow fadeInUp" data-wow-duration="1s">
               <p>
-                Brian Tarbox is a highly experienced and accomplished software developer with a remarkable programming journey spanning four decades. With a strong foundation built over 40 years of coding expertise, including a decade dedicated to Amazon Web Services (AWS), Brian has honed his skills and become a recognized authority in the field. His deep knowledge and proficiency in AWS services have made him a valuable asset in architecting and implementing cloud solutions.
+                Brian Tarbox is a highly experienced and accomplished software developer with a remarkable programming journey spanning a long time. With a strong foundation built over 40 years of coding expertise, including a decade dedicated to Amazon Web Services (AWS), Brian has honed his skills and become a recognized authority in the field. His deep knowledge and proficiency in AWS services have made him a valuable asset in architecting and implementing cloud solutions.
                 <br/><br/>
                 Brian has a Master's degree in Cognitive Pyschology from the University of Hawaii at Manoa where he studied "language" learning in bottlenosed Dolphins.
                 <br/><br/>
