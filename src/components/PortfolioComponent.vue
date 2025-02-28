@@ -1077,6 +1077,12 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
+        <img src="img/presentations/Ukraine.png" height="250" width="355"/><br>
+        <a href="https://www.youtube.com/watch?v=kY_M3bbojO4">DevOpsDay (Ukraine):Let's Talk Security (go to 2:15:38)</a><br><br>
+
+        <img src="img/presentations/NeuralNebulAI_10.png" height="250" width="325"/><br>
+        <a href="https://www.youtube.com/watch?v=PcGuAQrmGh8">Caylent Neural NebulAI Episode 10: Leveraging Data Inside of AI</a><br><br>
+
         <img src="img/presentations/NeuralNebulAI_8.png" height="250" width="325"/><br>
         <a href="https://www.youtube.com/watch?v=0zEWG19XRIc">Caylent Neural NebulAI Episode 8: Pre-AI Data Monderization & Enablement</a><br><br>
 
