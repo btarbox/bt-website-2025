@@ -1082,6 +1082,9 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
 
         <img src="img/presentations/cloudzero.png" height="250" width="355"/><br>I was part of the CloudZero / Anthropic / Caylent Lightning talk at re:Invent<br>
 
+        <img src="img/presentations/Garman_keynote_2025.png" height="250" width="355"/><br>
+        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7269814346912800768/">Matt Garman 2025 re:Invent Keynote</a><br><br>
+
         <img src="img/presentations/Silly.png" height="250" width="355"/><br>
         <a href="https://www.tiktok.com/@caylent/video/7406404346918866206?fbclid=IwY2xjawFam6dleHRuA2FlbQIxMAABHYEwLzlNC9nUs_VwfPgdU-wf-WITHMSzV_IySTydH1mtPdaEkCYR7uc3QQ_aem_kHH77ro0sQOkJZPVzgDG0Q">Caylent did a silly video of me at re:Invent</a><br><br>
 
