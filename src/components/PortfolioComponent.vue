@@ -1213,6 +1213,8 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <p>
               Over the years I've been published in a variety of places
             </p>
+            <a href="https://dev.to/btarbox/the-future-of-alexa-skills-211j">October 2023, <em>The Future Of Alexa Skills</em></a>
+
             I was quoted in a Financials Times article about Amazon Alexa
             <a href="https://enterprise-sharing.ft.com/redeem/5e67e3b4-2db9-4086-b973-aafc24fe6a45">February 2023, <em>Amazon's big dreams for Alexa fall short</em></a>
 
