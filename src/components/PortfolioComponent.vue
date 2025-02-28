@@ -1077,6 +1077,9 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
+        <img src="img/presentations/silly.png" height="250" width="355"/><br>
+        <a href="https://www.tiktok.com/@caylent/video/7406404346918866206?fbclid=IwY2xjawFam6dleHRuA2FlbQIxMAABHYEwLzlNC9nUs_VwfPgdU-wf-WITHMSzV_IySTydH1mtPdaEkCYR7uc3QQ_aem_kHH77ro0sQOkJZPVzgDG0Q">Caylent did a silly video of me at re:Invent</a><br><br>
+
         <img src="img/presentations/Ukraine.png" height="250" width="355"/><br>
         <a href="https://www.youtube.com/watch?v=kY_M3bbojO4">DevOpsDay (Ukraine):Let's Talk Security (go to 2:15:38)</a><br><br>
 
