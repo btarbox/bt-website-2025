@@ -1077,6 +1077,9 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
+        <img src="img/presentations/NeuralNebulAI_8.png" height="250" width="325"/><br>
+        <a href="https://www.youtube.com/watch?v=0zEWG19XRIc">Caylent Neural NebulAI Episode 8: Pre-AI Data Monderization & Enablement</a><br><br>
+
         <img src="img/presentations/NeuralNebulAI_5.png" height="250" width="325"/><br>
         <a href="https://www.youtube.com/watch?v=d6XPYeyRBrs">Caylent Neural NebulAI Episode 5: Foundation Models</a><br><br>
 
@@ -1219,6 +1222,8 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <p>
               Over the years I've been published in a variety of places
             </p>
+            <a href="https://caylent.com/blog/swami-sivasubramanian-keynote-recap-aws-re-invent-2023">December 2023, <em>Swami Sivasubramanian Keynote Recap</em></a>
+            <br><br>
             <a href="https://caylent.com/blog/werner-vogels-keynote-recap-aws-re-invent-2023">December 2023, <em>Werner Vogels Keynote Recap</em></a>
             <br><br>
             <a href="https://dev.to/btarbox/the-future-of-alexa-skills-211j">October 2023, <em>The Future Of Alexa Skills</em></a>
