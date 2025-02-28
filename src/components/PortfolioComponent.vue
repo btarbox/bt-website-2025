@@ -1077,7 +1077,7 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
-        <img src="img/presentations/NeuralNebulAI_2.png" height="250" width="275"/><br>
+        <img src="img/presentations/NeuralNebulAI_2.png" height="250" width="295"/><br>
         <a href="https://www.youtube.com/watch?v=3zcth3OwYfs">Caylent Neural NebulAI Episode 2: Unwrapping AI and GenAI</a><br><br>
 
         <img src="img/presentations/NeuralNebulAI_1.png" height="250" width="275"/><br>
