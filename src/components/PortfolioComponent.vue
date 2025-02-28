@@ -1078,7 +1078,7 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
         <img src="img/presentations/NeuralNebulAI_1.png" height="250" width="275"/><br>
-        <a href="https://https://www.youtube.com/watch?v=iDyrhOmJkXQ">Caylent Neural NebulAI Episode 1: Ethics</a><br><br>
+        <a href="https://www.youtube.com/watch?v=iDyrhOmJkXQ">Caylent Neural NebulAI Episode 1: Ethics</a><br><br>
 
         <a href="https://www.youtube.com/watch?v=4LEi7DZ5ydk">New Voices - advice from a hero</a><br><br>
 
