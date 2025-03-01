@@ -1080,7 +1080,7 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <img src="img/presentations/Werner_keynote_2025.png" height="250" width="355"/><br>
         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7270552970616856577/">Werner Vogels 2025 re:Invent Keynote</a><br><br>
 
-        <img src="img/presentations/cloudzero.png" height="250" width="355"/><br>I was part of the CloudZero / Anthropic / Caylent Lightning talk at re:Invent<br>
+        <img src="img/presentations/cloudzero.png" height="250" width="355"/><br>I was part of the CloudZero / Anthropic / Caylent Lightning talk at re:Invent<br><br>
 
         <img src="img/presentations/Garman_keynote_2025.png" height="250" width="355"/><br>
         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7269814346912800768/">Matt Garman 2025 re:Invent Keynote</a><br><br>
@@ -1251,6 +1251,10 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <br><br>An article AWS wrote about me
             <a href="https://developer.amazon.com/en-US/blogs/alexa/alexa-skills-kit/2022/05/Alexa-skill-insights-brian-tarbox-premier-league-may-20221">May 2022,
             <em>The Alexa Skills Insights Team helped the skill PremierLeague boost discovery and increase users</em></a>
+            <br><br>
+
+            <a href="https://dev.to/aws-heroes/time-to-rethink-cattle-vs-pets-serverless-5c0j">,
+            <em>Time to rethink cattle vs pets</em></a>
             <br><br>
 
             <h3>Sym.io</h3>
