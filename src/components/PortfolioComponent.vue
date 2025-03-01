@@ -1253,7 +1253,7 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <em>The Alexa Skills Insights Team helped the skill PremierLeague boost discovery and increase users</em></a>
             <br><br>
 
-            <a href="https://dev.to/aws-heroes/time-to-rethink-cattle-vs-pets-serverless-5c0j">,
+            <a href="https://dev.to/aws-heroes/time-to-rethink-cattle-vs-pets-serverless-5c0j">January 2023, Dev.to 
             <em>Time to rethink cattle vs pets</em></a>
             <br><br>
 
