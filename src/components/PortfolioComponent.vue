@@ -1239,6 +1239,12 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <p>
               Over the years I've been published in a variety of places
             </p>
+            <a href="https://dev.to/btarbox/certification-tips-from-an-aws-hero-n16">March 2024, <em>Certification Tips from an AWS Hero</em></a>
+            <br><br>
+            <a href="https://dev.to/btarbox/running-an-inclusive-and-engaging-aws-user-group-i0i">March 2024, <em>Running ann Inclusive and Engaging AWS User Group</em></a>
+            <br><br>
+            <a href="https://dev.to/btarbox/enhancing-data-security-with-s3-object-lock-1je4">March 2024, <em>Enhancing Data Security with S3 Object Lock</em></a>
+            <br><br>
             <a href="https://caylent.com/blog/swami-sivasubramanian-keynote-recap-aws-re-invent-2023">December 2023, <em>Swami Sivasubramanian Keynote Recap</em></a>
             <br><br>
             <a href="https://caylent.com/blog/werner-vogels-keynote-recap-aws-re-invent-2023">December 2023, <em>Werner Vogels Keynote Recap</em></a>
@@ -1253,6 +1259,9 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <em>The Alexa Skills Insights Team helped the skill PremierLeague boost discovery and increase users</em></a>
             <br><br>
 
+            <a href="https://dev.to/btarbox/finally-understanding-outposts-and-local-zones-5d91">September 2023, Dev.to 
+            <em>Finally Understanding Outposts and Local Zones</em></a>
+            <br><br>
             <a href="https://dev.to/aws-heroes/exploring-the-options-for-billing-and-capacity-reservations-53o3">June 2023, Dev.to 
             <em>Exploring The Options For Billing And Capacity Reservations</em></a>
             <br><br>
