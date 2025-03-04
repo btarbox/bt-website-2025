@@ -1239,6 +1239,10 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <p>
               Over the years I've been published in a variety of places
             </p>
+            <a href="https://dev.to/btarbox/why-resilience-matters-21d4">March 2024, <em>Why Resilience Matters</em></a>
+            <br><br>
+            <a href="https://dev.to/aws-heroes/certification-is-not-enough-98j">March 2024, <em>Certification is not enough</em></a>
+            <br><br>
             <a href="https://dev.to/btarbox/certification-tips-from-an-aws-hero-n16">March 2024, <em>Certification Tips from an AWS Hero</em></a>
             <br><br>
             <a href="https://dev.to/btarbox/running-an-inclusive-and-engaging-aws-user-group-i0i">March 2024, <em>Running ann Inclusive and Engaging AWS User Group</em></a>
