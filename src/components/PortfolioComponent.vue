@@ -1088,6 +1088,9 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <img src="img/presentations/Silly.png" height="250" width="355"/><br>
         <a href="https://www.tiktok.com/@caylent/video/7406404346918866206?fbclid=IwY2xjawFam6dleHRuA2FlbQIxMAABHYEwLzlNC9nUs_VwfPgdU-wf-WITHMSzV_IySTydH1mtPdaEkCYR7uc3QQ_aem_kHH77ro0sQOkJZPVzgDG0Q">Caylent did a silly video of me at re:Invent</a><br><br>
 
+        <img src="img/presentations/Logicata.png" height="250" width="355"/><br>
+        <a href="https://logicastvideo.podbean.com/e/season-3-episode-16-certifications-snowmobiles-and-large-language-models/">Logicata: Certifications, Snowmobiles, and Large Language Models</a><br><br>
+
         <img src="img/presentations/Ukraine.png" height="250" width="355"/><br>
         <a href="https://www.youtube.com/watch?v=kY_M3bbojO4">DevOpsDay (Ukraine):Let's Talk Security (go to 2:15:38)</a><br><br>
 
@@ -1239,6 +1242,8 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <p>
               Over the years I've been published in a variety of places
             </p>
+            <a href="https://caylent.com/blog/optimizing-aws-data-pipelines-for-compliance-in-digital-advertising">April 2024, <em>Optimizing AWS Data Pipelines for Compliance in Digital Advertising</em></a>
+            <br><br>
             <a href="https://dev.to/btarbox/why-resilience-matters-21d4">March 2024, <em>Why Resilience Matters</em></a>
             <br><br>
             <a href="https://dev.to/aws-heroes/certification-is-not-enough-98j">March 2024, <em>Certification is not enough</em></a>
