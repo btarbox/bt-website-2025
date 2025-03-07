@@ -1242,6 +1242,8 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <p>
               Over the years I've been published in a variety of places
             </p>
+            <a href="https://caylent.com/blog/scaling-ml-to-meet-customer-demand-and-reduce-errors">October 2024, <em>Scaling ML to Meet Customer Demand and Reduce Errors</em></a>
+            <br><br>
             <a href="https://caylent.com/blog/optimizing-aws-data-pipelines-for-compliance-in-digital-advertising">April 2024, <em>Optimizing AWS Data Pipelines for Compliance in Digital Advertising</em></a>
             <br><br>
             <a href="https://dev.to/btarbox/why-resilience-matters-21d4">March 2024, <em>Why Resilience Matters</em></a>
