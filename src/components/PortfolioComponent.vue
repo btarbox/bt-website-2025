@@ -1078,7 +1078,7 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
         <img src="img/presentations/Logicata.png" height="250" width="355"/><br>
-        <a href=""https://www.youtube.com/watch?v=JwMKZH2G5uY>Logicast AWS New Roundup</a><br><br>
+        <a href="https://www.youtube.com/watch?v=JwMKZH2G5uY">Logicast AWS New Roundup</a><br><br>
 
 
         <img src="img/presentations/Werner_keynote_2025.png" height="250" width="355"/><br>
