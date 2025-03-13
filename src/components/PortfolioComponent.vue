@@ -1083,13 +1083,13 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <img src="img/presentations/logicast_4_10.png" height="250" width="355"/><br>
         <a href="https://www.youtube.com/watch?v=JwMKZH2G5uY">Logicast AWS New Roundup</a><br><br>
 
-        <img src="img/presentations/Amarathon.JPG" height="250" width="355"/><br>
+        <img src="img/presentations/Amarathon.jpeg" height="250" width="355"/><br>
         Participated in the first 12 Hour Geek Talk Amarathon. <br>
-13 Livestreaming Platforms
-566,886 total views
-146,787 unique viewers
-31,833 peak concurrent viewers
-3,762 interactions, including comments and challenges
+13 Livestreaming Platforms<br>
+566,886 total views<br>
+146,787 unique viewers<br>
+31,833 peak concurrent vie<br>wers
+3,762 interactions, including comments and challenges <br>
 Viewers from 16 countries and regions
 <br><br>
 
