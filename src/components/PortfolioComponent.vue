@@ -1083,6 +1083,16 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <img src="img/presentations/logicast_4_10.png" height="250" width="355"/><br>
         <a href="https://www.youtube.com/watch?v=JwMKZH2G5uY">Logicast AWS New Roundup</a><br><br>
 
+        <img src="img/presentations/Amarathon.JPG" height="250" width="355"/><br>
+        Participated in the first 12 Hour Geek Talk Amarathon. <br>
+13 Livestreaming Platforms
+566,886 total views
+146,787 unique viewers
+31,833 peak concurrent viewers
+3,762 interactions, including comments and challenges
+Viewers from 16 countries and regions
+<br><br>
+
 
         <img src="img/presentations/Werner_keynote_2025.png" height="250" width="355"/><br>
         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7270552970616856577/">Werner Vogels 2025 re:Invent Keynote</a><br><br>
