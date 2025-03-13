@@ -1259,6 +1259,10 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <p>
               Over the years I've been published in a variety of places
             </p>
+
+            <img src="img/presentations/AWS_healthcare_img.png" height="250" width="355"/><br>
+            <a href="https://caylent.com/blog/modern-healthcare-apps-on-aws">March 2025, Modern Healthcare Apps on AWS</a><br><br>
+
             <a href="https://caylent.com/blog/getting-started-with-agentic-ai-on-aws">January 2025, <em>Getting Started with Agentic AI on AWS</em></a>
             <br><br>
             <a href="https://caylent.com/blog/scaling-ml-to-meet-customer-demand-and-reduce-errors">October 2024, <em>Scaling ML to Meet Customer Demand and Reduce Errors</em></a>
