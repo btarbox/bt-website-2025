@@ -1077,6 +1077,9 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
+        <img src="img/presentations/migrating.png" height="250" width="355"/><br>
+        <a href="https://www.youtube.com/watch?v=6rNZKhRI1I8">Migrating a Full Stack App to AWS Amplify Gen 2 w/ Brian Tarbox (Amplify, Route53, CloudShell, IAM)</a><br><br>
+
         <img src="img/presentations/logicast_4_10.png" height="250" width="355"/><br>
         <a href="https://www.youtube.com/watch?v=JwMKZH2G5uY">Logicast AWS New Roundup</a><br><br>
 
