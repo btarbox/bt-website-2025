@@ -77,6 +77,15 @@
             <li>
               <a
                 class="c-pointer"
+                :class="activeNav === '11' ? 'current' : ''"
+                @click.prevent="() => (this.activeNav = '11')"
+                data-filter=".Partner"
+                >Patents</a
+              >
+            </li>
+            <li>
+              <a
+                class="c-pointer"
                 :class="activeNav === '8' ? 'current' : ''"
                 @click.prevent="() => (this.activeNav = '8')"
                 data-filter=".Patents"
@@ -250,6 +259,29 @@
               </div>
             </li>
 
+            <li class="Partner grid-item">
+              <div class="inner">
+                <div
+                  class="entry dizme_tm_portfolio_animation_wrap"
+                  data-title="Partner"
+                  data-category="Partner"
+                >
+                  <a
+                    class="portfolio_popup"
+                    href="#"
+                    @click.prevent="active = 11"
+                  >
+                    <img src="/img/thumbs/42-34.jpg" alt="" />
+                    <div class="main" data-img-url="img/portfolio/partner/partner.png"></div>
+                  </a>
+                </div>
+                <div class="mobile_title">
+                  <h3>Partner</h3>
+                  <span>Partner</span>
+                </div>
+              </div>
+            </li>
+
             <li class="Patents grid-item">
               <div class="inner">
                 <div
@@ -272,6 +304,8 @@
                 </div>
               </div>
             </li>
+
+
 
             <li class="Presentations grid-item">
               <div class="inner">
@@ -1002,6 +1036,52 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
     </ModalBox>
   </div>
 
+  <!-- Partner -->
+  <div :class="`${active === 11 ? '' : 'hidden_content'}`">
+    <ModalBox :close="close">
+      <div class="popup_details">
+        <div class="top_image">
+          <img src="img/thumbs/4-2.jpg" alt="" />
+          <div
+            class="main"
+            data-img-url="img/portfolio/partner/partner.png"
+            style="background-image: url('img/portfolio/Partner/partner.png')"
+          ></div>
+        </div>
+        <div class="partner_main_title">
+          <h3>AWS Partner Certifications and Service Delivery Programs</h3>
+          <span><a href="#"></a></span>
+          <div></div>
+        </div>
+        <div class="main_details">
+          <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
+            <p>
+              I've been granted ten US Patents; Several patents were deemed broad enough to split into two separate patents
+            </p>
+
+                <img src="img/partner/1.png" height="300" width="375">
+                <img src="img/partner/2.png" height="300" width="375">
+                <img src="img/partner/3.png" height="300" width="375">
+                <img src="img/partner/4.png" height="300" width="375">
+                <img src="img/partner/5.png" height="300" width="375">
+                <img src="img/partner/6.png" height="300" width="375">
+                <img src="img/partner/7.png" height="300" width="375">
+                <img src="img/partner/8.png" height="300" width="375">
+                <img src="img/partner/9.png" height="300" width="375">
+                <img src="img/partner/10.png" height="300" width="375">
+                <img src="img/partner/11.png" height="300" width="375">
+                <img src="img/partner/12.png" height="300" width="375">
+                <img src="img/partner/13.png" height="300" width="375">
+                <img src="img/partner/14.png" height="300" width="375">
+        <br>
+                   
+              </div>
+            <!-- </li> -->
+          <!-- </ul> -->
+        </div>
+      </div>
+    </ModalBox>
+  </div>
 
 
   <!-- Patents -->
