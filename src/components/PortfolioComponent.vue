@@ -1044,7 +1044,7 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
           <img src="img/thumbs/4-2.jpg" alt="" />
           <div
             class="main"
-            data-img-url="img/portfolio/partner/partner.png"
+            data-img-url="img/partner/partner.png"
             style="background-image: url('img/partner/partner.png')"
           ></div>
         </div>
@@ -1059,20 +1059,20 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
               I lead Caylent's Partner Service Certification and Service Delivery Program team. These are the Partner Certifications I've helped Caylent acheive.
             </p>
 
-                <img src="img/partner/1.png" height="100" width="150">
-                <img src="img/partner/2.png" height="100" width="150">
-                <img src="img/partner/3.png" height="100" width="150">
-                <img src="img/partner/4.png" height="100" width="150">
-                <img src="img/partner/5.png" height="100" width="150">
-                <img src="img/partner/6.png" height="100" width="150">
-                <img src="img/partner/7.png" height="100" width="150">
-                <img src="img/partner/8.png" height="100" width="150">
-                <img src="img/partner/9.png" height="100" width="150">
-                <img src="img/partner/10.png" height="100" width="150">
-                <img src="img/partner/11.png" height="100" width="150">
-                <img src="img/partner/12.png" height="100" width="150">
-                <img src="img/partner/13.png" height="100" width="150">
-                <img src="img/partner/14.png" height="100" width="150">
+                <img src="img/partner/1.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/2.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/3.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/4.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/5.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/6.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/7.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/8.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/9.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/10.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/11.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/12.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/13.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/14.png" height="100" width="150" style="margin: 20px;">
         <br>
                    
               </div>
