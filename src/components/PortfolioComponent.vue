@@ -708,13 +708,13 @@
               JavaOne Speaker Award, Most Innovative Use of Jira, NetWorld Product Of The Year, etc.
             </p><p>
               
-              <img src="https://briantarbox.org/DukesChoice.jpg" height="200" width="200"/>
-              <img src="https://briantarbox.org/RockStar.gif" height="200" width="200"/>
-              <img src="https://briantarbox.org/CharlieAwards.png" height="200" width="200"/>
-              <img src="https://briantarbox.org/IMG_8390.png" height="200" width="200"/>
-              <img src="https://briantarbox.org/IMG_8391.png" height="200" width="200"/>
-              <img src="https://briantarbox.org/pankration.jpg" height="200" width="200"/>
-              <img src="https://briantarbox.org/million_streams.jpg" height="200" width="200"/>
+              <img src="https://briantarbox.org/DukesChoice.jpg" height="200" width="200" style="margin: 20px;"/>
+              <img src="https://briantarbox.org/RockStar.gif" height="200" width="200" style="margin: 20px;"/>
+              <img src="https://briantarbox.org/CharlieAwards.png" height="200" width="200" style="margin: 20px;"/>
+              <img src="https://briantarbox.org/IMG_8390.png" height="200" width="200" style="margin: 20px;"/>
+              <img src="https://briantarbox.org/IMG_8391.png" height="200" width="200" style="margin: 20px;"/>
+              <img src="https://briantarbox.org/pankration.jpg" height="200" width="200" style="margin: 20px;"/>
+              <img src="https://briantarbox.org/million_streams.jpg" height="200" width="200" style="margin: 20px;"/>
             </p>
             <!-- <p>
               <a 
