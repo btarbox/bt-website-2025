@@ -80,7 +80,7 @@
                 :class="activeNav === '11' ? 'current' : ''"
                 @click.prevent="() => (this.activeNav = '11')"
                 data-filter=".Partner"
-                >Patents</a
+                >Partner</a
               >
             </li>
             <li>
@@ -1045,7 +1045,7 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
           <div
             class="main"
             data-img-url="img/portfolio/partner/partner.png"
-            style="background-image: url('img/portfolio/Partner/partner.png')"
+            style="background-image: url('img/partner/partner.png')"
           ></div>
         </div>
         <div class="partner_main_title">
@@ -1056,23 +1056,23 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
             <p>
-              I've been granted ten US Patents; Several patents were deemed broad enough to split into two separate patents
+              I lead Caylent's Partner Service Certification and Service Delivery Program team.
             </p>
 
-                <img src="img/partner/1.png" height="300" width="375">
-                <img src="img/partner/2.png" height="300" width="375">
-                <img src="img/partner/3.png" height="300" width="375">
-                <img src="img/partner/4.png" height="300" width="375">
-                <img src="img/partner/5.png" height="300" width="375">
-                <img src="img/partner/6.png" height="300" width="375">
-                <img src="img/partner/7.png" height="300" width="375">
-                <img src="img/partner/8.png" height="300" width="375">
-                <img src="img/partner/9.png" height="300" width="375">
-                <img src="img/partner/10.png" height="300" width="375">
-                <img src="img/partner/11.png" height="300" width="375">
-                <img src="img/partner/12.png" height="300" width="375">
-                <img src="img/partner/13.png" height="300" width="375">
-                <img src="img/partner/14.png" height="300" width="375">
+                <img src="img/partner/1.png" height="200" width="275">
+                <img src="img/partner/2.png" height="200" width="275">
+                <img src="img/partner/3.png" height="200" width="275">
+                <img src="img/partner/4.png" height="200" width="275">
+                <img src="img/partner/5.png" height="200" width="275">
+                <img src="img/partner/6.png" height="200" width="275">
+                <img src="img/partner/7.png" height="200" width="275">
+                <img src="img/partner/8.png" height="200" width="275">
+                <img src="img/partner/9.png" height="200" width="275">
+                <img src="img/partner/10.png" height="200" width="275">
+                <img src="img/partner/11.png" height="200" width="275">
+                <img src="img/partner/12.png" height="200" width="275">
+                <img src="img/partner/13.png" height="200" width="275">
+                <img src="img/partner/14.png" height="200" width="275">
         <br>
                    
               </div>
