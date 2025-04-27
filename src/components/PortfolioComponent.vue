@@ -272,7 +272,7 @@
                     @click.prevent="active = 11"
                   >
                     <img src="/img/thumbs/42-34.jpg" alt="" />
-                    <div class="main" data-img-url="img/portfolio/partner/partner.png"></div>
+                    <div class="main" data-img-url="img/partner/partner.png"></div>
                   </a>
                 </div>
                 <div class="mobile_title">
@@ -1056,23 +1056,23 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
             <p>
-              I lead Caylent's Partner Service Certification and Service Delivery Program team.
+              I lead Caylent's Partner Service Certification and Service Delivery Program team. These are the Partner Certifications I've helped Caylent acheive.
             </p>
 
-                <img src="img/partner/1.png" height="200" width="275">
-                <img src="img/partner/2.png" height="200" width="275">
-                <img src="img/partner/3.png" height="200" width="275">
-                <img src="img/partner/4.png" height="200" width="275">
-                <img src="img/partner/5.png" height="200" width="275">
-                <img src="img/partner/6.png" height="200" width="275">
-                <img src="img/partner/7.png" height="200" width="275">
-                <img src="img/partner/8.png" height="200" width="275">
-                <img src="img/partner/9.png" height="200" width="275">
-                <img src="img/partner/10.png" height="200" width="275">
-                <img src="img/partner/11.png" height="200" width="275">
-                <img src="img/partner/12.png" height="200" width="275">
-                <img src="img/partner/13.png" height="200" width="275">
-                <img src="img/partner/14.png" height="200" width="275">
+                <img src="img/partner/1.png" height="100" width="150">
+                <img src="img/partner/2.png" height="100" width="150">
+                <img src="img/partner/3.png" height="100" width="150">
+                <img src="img/partner/4.png" height="100" width="150">
+                <img src="img/partner/5.png" height="100" width="150">
+                <img src="img/partner/6.png" height="100" width="150">
+                <img src="img/partner/7.png" height="100" width="150">
+                <img src="img/partner/8.png" height="100" width="150">
+                <img src="img/partner/9.png" height="100" width="150">
+                <img src="img/partner/10.png" height="100" width="150">
+                <img src="img/partner/11.png" height="100" width="150">
+                <img src="img/partner/12.png" height="100" width="150">
+                <img src="img/partner/13.png" height="100" width="150">
+                <img src="img/partner/14.png" height="100" width="150">
         <br>
                    
               </div>
