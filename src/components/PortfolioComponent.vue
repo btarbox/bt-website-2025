@@ -1059,9 +1059,9 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
             <p>
               Here are the AWS Partner of the Year Awards Caylent received last year.
             </p>
-                <img src="img/partner/29.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/30.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/31.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/29.png" height="200" width="225" style="margin: 20px;">
+                <img src="img/partner/30.png" height="200" width="225" style="margin: 20px;">
+                <img src="img/partner/31.png" height="200" width="225" style="margin: 20px;">
             <p>
               I lead Caylent's Partner Service Certification and Service Delivery Program team. These are the Partner Certifications I've helped Caylent acheive.
             </p>
