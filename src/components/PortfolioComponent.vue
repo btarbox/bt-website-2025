@@ -1178,10 +1178,11 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
-        <img src="img/presentations/reinforce1.jpg" height="200" width="300"/><br>
-        <img src="img/presentations/reinforce2.jpg" height="200" width="300"/><br>
-        <img src="img/presentations/reinforce3.jpg" height="200" width="300"/><br>
-        <img src="img/presentations/tarbox_reinforce_talk.jpg" height="250" width="355"/><br>
+        <img src="img/presentations/reinforce1.jpg" height="200" width="300" style="margin: 20px;">
+        <img src="img/presentations/reinforce2.jpg" height="200" width="300" style="margin: 20px;">
+        <img src="img/presentations/reinforce3.jpg" height="200" width="300" style="margin: 20px;">
+        <img src="img/presentations/tarbox_reinforce_talk.jpg" height="200" width="300" style="margin: 20px;">
+
         I gave two talks and led two meetups at 2025 re:Inforce<br><br>
 
         <img src="img/tarbox_at_MidwestCommunityDay.jpg" height="250" width="355"/><br>
