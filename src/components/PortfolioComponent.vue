@@ -1370,6 +1370,8 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <p>
               Over the years I've been published in a variety of places
             </p>
+            <a href="https://caylent.com/blog/generative-ai-healthcare">June 2025, Generative AI in Healthcare: What’s Next</a><br><br>
+            <br><br>
 
             <img src="img/presentations/AWS_healthcare_img.png" height="250" width="355"/><br>
             <a href="https://caylent.com/blog/modern-healthcare-apps-on-aws">March 2025, Modern Healthcare Apps on AWS</a><br><br>
