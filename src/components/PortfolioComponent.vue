@@ -1057,6 +1057,12 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
             <p>
+              Here are the AWS Partner of the Year Awards Caylent received last year.
+            </p>
+                <img src="img/partner/29.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/30.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/31.png" height="100" width="150" style="margin: 20px;">
+            <p>
               I lead Caylent's Partner Service Certification and Service Delivery Program team. These are the Partner Certifications I've helped Caylent acheive.
             </p>
 
@@ -1074,7 +1080,7 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
                 <img src="img/partner/12.png" height="100" width="150" style="margin: 20px;">
                 <img src="img/partner/13.png" height="100" width="150" style="margin: 20px;">
                 <img src="img/partner/14.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/15.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/AWS Security Competency Badge.png" height="100" width="150" style="margin: 20px;">
                 <img src="img/partner/16.png" height="100" width="150" style="margin: 20px;">
                 <img src="img/partner/17.png" height="100" width="150" style="margin: 20px;">
                 <img src="img/partner/18.png" height="100" width="150" style="margin: 20px;">
