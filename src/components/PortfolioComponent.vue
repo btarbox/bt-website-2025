@@ -1183,7 +1183,7 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <img src="img/presentations/reinforce3.jpg" height="200" width="300" style="margin: 20px;">
         <img src="img/presentations/tarbox_reinforce_talk.jpg" height="200" width="300" style="margin: 20px;">
 
-        I gave two talks and led two meetups at 2025 re:Inforce<br><br>
+        <br>I gave two talks and led two meetups at 2025 re:Inforce<br><br>
 
         <img src="img/tarbox_at_MidwestCommunityDay.jpg" height="250" width="355"/><br>
 Presented a talk on Introduction to Agentic Programming at the AWS Midwest Community Day<br><br>
