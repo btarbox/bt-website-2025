@@ -1178,6 +1178,9 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
+        <img src="img/presentations/DukeCloudClub.png" height="300" width="300" style="margin: 20px;">
+        <br>I gave an introduction to the cloud talk at the Duke University Cloud Club<br>
+
         <img src="img/presentations/reinforce1.jpg" height="200" width="300" style="margin: 20px;">
         <img src="img/presentations/reinforce2.jpg" height="200" width="300" style="margin: 20px;">
         <img src="img/presentations/reinforce3.jpg" height="200" width="300" style="margin: 20px;">
