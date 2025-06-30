@@ -1,5 +1,5 @@
 <template>
-  <div class="dizme_tm_section">
+  <div class="dizme_tm_section" id="testimonials">
     <div class="dizme_tm_testimonials">
       <div class="dizme_tm_main_title" data-align="center">
         <span>Testimonials</span>
