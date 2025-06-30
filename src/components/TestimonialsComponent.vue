@@ -16,6 +16,34 @@
               :modules="modules"
               class="owl-carousel owl-theme"
             >
+
+              <swiper-slide>
+                <div class="icon" v-html="testimonialIcon"></div>
+                <div class="text">
+                  <p>
+It's not every day you get to chat with an AWS Community Hero, Alexa Champion, and industry innovator all in one person! Thank you Brian Tarbox for stopping by our AI Agent Security Arena booth at AWS re:inforce 2025 and diving deep into the OWASP Top 10 for Large Language Models. 
+
+Our conversation exploring how AWS security services can effectively mitigate emerging LLM threats was the highlight of the event. Brian's unique perspective, backed by his 10 patents and extensive speaking experience, brought fresh insights to this critical security domain.
+
+Visitors to our AI Agent Security Arena experienced our interactive game, which challenges players to defend AI systems using appropriate AWS security services. The game's tiered difficulty levels made security concepts accessible to everyone from beginners to security pros.
+
+The enthusiasm from attendees like Brian validates our approach of making complex security concepts tangible and engaging through gamification.
+                  </p>
+                </div>
+                <div class="short">
+                  <div class="image">
+                    <img
+                      class="main"
+                      src="/img/testimonials/ChiragOswal.png"
+                    />
+                  </div>
+                  <div class="detail">
+                    <h3>Chirag Oswal</h3>
+                    <span>Solutions Architect, AWS</span>
+                  </div>
+                </div>
+              </swiper-slide>
+
               <swiper-slide>
                 <div class="icon" v-html="testimonialIcon"></div>
                 <div class="text">
