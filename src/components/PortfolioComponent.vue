@@ -1374,7 +1374,7 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
               Over the years I've been published in a variety of places<br><br>
             </p>
             <a href="https://caylent.com/blog/amazon-bedrock-agent-core-redefining-agent-infrastructure-as-undifferentiated-heavy-lifting">
-             <img src="img/presentations/AgentCoreThumbnail.png" width="100" height="100">
+             <img src="img/presentations/AgentCoreThumbnail.png" width="200" height="200"><br>
              August 2025, AgentCore as Undifferentiated Heavy Lifting</a><br><br>
             <br><br>
 
