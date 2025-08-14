@@ -1371,8 +1371,11 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
             <p>
-              Over the years I've been published in a variety of places
+              Over the years I've been published in a variety of places<br><br>
             </p>
+            </p>
+            <a href="https://caylent.com/blog/amzon-bedrock-agent-core-redefining-agent-infrastructure-as-undifferentiated-heavy-lifting">August 2025, AgentCore as Undifferentiated Heavy Lifting</a><br><br>
+            <br><br>
             <a href="https://caylent.com/blog/generative-ai-healthcare">June 2025, Generative AI in Healthcare: What’s Next</a><br><br>
             <br><br>
 
