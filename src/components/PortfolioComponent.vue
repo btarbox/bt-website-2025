@@ -1373,8 +1373,11 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <p>
               Over the years I've been published in a variety of places<br><br>
             </p>
-            <a href="https://caylent.com/blog/amazon-bedrock-agent-core-redefining-agent-infrastructure-as-undifferentiated-heavy-lifting">August 2025, AgentCore as Undifferentiated Heavy Lifting</a><br><br>
+            <a href="https://caylent.com/blog/amazon-bedrock-agent-core-redefining-agent-infrastructure-as-undifferentiated-heavy-lifting">
+             <img src="img/AgentCoreThumbnail.png" width="100" height="100">
+             August 2025, AgentCore as Undifferentiated Heavy Lifting</a><br><br>
             <br><br>
+
             <a href="https://caylent.com/blog/generative-ai-healthcare">June 2025, Generative AI in Healthcare: What’s Next</a><br><br>
             <br><br>
 
