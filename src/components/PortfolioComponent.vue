@@ -1411,10 +1411,10 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
             <br><br>
             <a href="https://dev.to/btarbox/the-future-of-alexa-skills-211j">October 2023, <em>The Future Of Alexa Skills</em></a>
             <br><br>
-            I was quoted in a Financials Times article about Amazon Alexa
+            I was quoted in a Financials Times article about Amazon Alexa<br>
             <a href="https://enterprise-sharing.ft.com/redeem/5e67e3b4-2db9-4086-b973-aafc24fe6a45">February 2023, <em>Amazon's big dreams for Alexa fall short</em></a>
 
-            <br><br>An article AWS wrote about me
+            <br><br>An article AWS wrote about me<br>
             <a href="https://developer.amazon.com/en-US/blogs/alexa/alexa-skills-kit/2022/05/Alexa-skill-insights-brian-tarbox-premier-league-may-20221">May 2022,
             <em>The Alexa Skills Insights Team helped the skill PremierLeague boost discovery and increase users</em></a>
             <br><br>
