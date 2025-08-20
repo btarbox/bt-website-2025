@@ -1066,34 +1066,34 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
               I lead Caylent's Partner Service Certification and Service Delivery Program team. These are the Partner Certifications I've helped Caylent acheive.
             </p>
 
-                <img src="img/partner/1.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/2.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/3.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/4.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/5.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/6.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/7.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/8.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/9.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/10.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/11.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/12.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/13.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/14.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/AWS Security Competency Badge.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/16.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/17.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/18.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/19.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/20.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/21.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/22.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/23.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/24.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/25.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/26.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/27.png" height="100" width="150" style="margin: 20px;">
-                <img src="img/partner/28.png" height="100" width="150" style="margin: 20px;">
+                <img src="img/partner/1.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/2.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/3.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/4.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/5.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/6.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/7.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/8.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/9.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/10.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/11.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/12.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/13.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/14.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/AWS Security Competency Badge.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/16.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/17.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/18.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/19.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/20.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/21.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/22.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/23.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/24.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/25.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/26.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/27.png" height="150" width="150" style="margin: 20px;">
+                <img src="img/partner/28.png" height="150" width="150" style="margin: 20px;">
         <br>
                    
               </div>
