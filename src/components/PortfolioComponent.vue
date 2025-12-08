@@ -1181,11 +1181,11 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
 
         <img src="img/presentations/reinvent.png" height="300" width="300" style="margin: 20px;">
         <br>Gave DEV317 Red Team vs. Blue Team, Securing AI Avents<br>
-        <img src="img/presentations/reinvent2025/AgentTalk.jpg" height="300" width="300" style="margin: 20px;">
-        <img src="img/presentations/reinvent2025/AgentTalk2.jpg" height="300" width="300" style="margin: 20px;">
-        <img src="img/presentations/reinvent2025/AgentTalk3.jpg" height="300" width="300" style="margin: 20px;">
-        <img src="img/presentations/reinvent2025/AgentTalk4.jpg" height="300" width="300" style="margin: 20px;">
-        <img src="img/presentations/reinvent2025/TheBriansFromBoston.jpg" height="300" width="300" style="margin: 20px;">
+        <img src="img/presentations/reinvent2025/AgentTalk.jpeg" height="300" width="300" style="margin: 20px;">
+        <img src="img/presentations/reinvent2025/AgentTalk2.jpeg" height="300" width="300" style="margin: 20px;">
+        <img src="img/presentations/reinvent2025/AgentTalk3.jpeg" height="300" width="300" style="margin: 20px;">
+        <img src="img/presentations/reinvent2025/AgentTalk4.jpeg" height="300" width="300" style="margin: 20px;">
+        <img src="img/presentations/reinvent2025/TheBriansFromBoston.jpeg" height="300" width="300" style="margin: 20px;">
         <br><br>
 
         <img src="img/presentations/DukeCloudClub.png" height="300" width="300" style="margin: 20px;">
