@@ -1383,16 +1383,17 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
         </div>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
+
            <a href="https://caylent.com/blog/navigating-the-amazon-pinpoint-deprecation-what-you-need-to-know-and-do-before-october-2026">
            March 2026 Navigating the Amazon Pinpoint Deprecation: What You Need to Know (and Do) Before October 2026
            <br><br>
 
            <a href="https://caylent.com/blog/what-swamis-2025-reinvent-keynote-revealed-about-the-next-phase-of-ai-on-aws">
-           Jan 2026 What Swami’s 2025 re:Invent Keynote Revealed About the Next Phase of AI on AWS
+           Jan 2026 What Swami’s 2025 re:Invent Keynote Revealed About the Next Phase of AI on AWS</a>
            <br><br>
 
             <a href="https://caylent.com/blog/amazon-bedrock-agent-core-redefining-agent-infrastructure-as-undifferentiated-heavy-lifting">
-             <img src="img/presentations/AgentCoreThumbnail.png" width="200" height="200"><br>
+             <img src="img/presentations/AgentCoreThumbnail.png" width="200" height="200"></a><br>
              August 2025, AgentCore as Undifferentiated Heavy Lifting</a><br><br>
             <br><br>
 
