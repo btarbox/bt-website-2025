@@ -1392,6 +1392,18 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
            Jan 2026 What Swami’s 2025 re:Invent Keynote Revealed About the Next Phase of AI on AWS</a>
            <br><br>
 
+           <a href="https://caylent.com/blog/what-dr-ruba-bornos-2025-reinvent-keynote-means-for-aws-partnersk">
+           Jan 2026 What Dr. Ruba Borno’s 2025 re:Invent Keynote Means for AWS Partners</a>
+           <br><br>
+
+           <a href="https://caylent.com/blog/securing-ai-agents-on-aws-designing-autonomous-systems-you-can-actually-trust">
+           Jan 2026 Securing AI Agents on AWS: Designing Autonomous Systems You Can Actually Trust</a>
+           <br><br>
+
+           <a href="https://caylent.com/blog/werner-vogels-final-keynote-renaissance-developers-explained">
+           Jan 2026 Werner Vogels final keynote</a>
+           <br><br>
+
             <a href="https://caylent.com/blog/amazon-bedrock-agent-core-redefining-agent-infrastructure-as-undifferentiated-heavy-lifting">
              <img src="img/presentations/AgentCoreThumbnail.png" width="200" height="200"></a><br>
              August 2025, AgentCore as Undifferentiated Heavy Lifting</a><br><br>
