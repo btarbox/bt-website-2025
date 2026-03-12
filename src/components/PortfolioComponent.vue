@@ -206,7 +206,7 @@
                 </div>
                 <div class="mobile_title">
                   <h3>Certifications</h3>
-                  <span>ACertifications</span>
+                  <span>Certifications</span>
                 </div>
               </div>
             </li>
@@ -1179,7 +1179,7 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
 
-        <img src="img/presentations/reinvent2025/reinvent.png" height="300" width="300" style="margin: 20px;">
+        <img src="img/presentations/reinvent2025/reinvent.png" height="300" width="400" style="margin: 20px;">
         <br>Gave DEV317 Red Team vs. Blue Team, Securing AI Avents<br>
         <img src="img/presentations/reinvent2025/AgentTalk.jpeg" height="300" width="300" style="margin: 20px;">
         <img src="img/presentations/reinvent2025/AgentTalk2.jpeg" height="300" width="300" style="margin: 20px;">
