@@ -911,7 +911,7 @@
 
 
   <!-- Certifications -->
-  <div :class="`${active === 11 ? '' : 'hidden_content'}`">
+  <div :class="`${active === 12 ? '' : 'hidden_content'}`">
     <ModalBox :close="close">
       <div class="popup_details">
         <div class="top_image">
