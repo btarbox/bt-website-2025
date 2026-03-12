@@ -931,6 +931,7 @@
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
             <p>
               I have a number of certifications.  Most are technology related but I'm also a Rescue Diver and an Instrument Rated Private Pilot<br><br>
+                <img src="img/certifications/GenAiProCert.png" height="400" width="385">
                 <img src="img/certifications/aws-certified-alexa-skill-builder-specialty.png" height="300" width="385">
                 <img src="img/certifications/aws-certified-database-specialty.png" height="300" width="385"><br>
                 <img src="img/certifications/aws-certified-developer-associate.png" height="300" width="385">
