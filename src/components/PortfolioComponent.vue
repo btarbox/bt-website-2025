@@ -50,7 +50,7 @@
             <li>
               <a
                 class="c-pointer"
-                :class="activeNav === '11' ? 'current' : ''"
+                :class="activeNav === '12' ? 'current' : ''"
                 @click.prevent="() => (this.activeNav = '4')"
                 data-filter=".Certifications"
                 >Certifications</a
@@ -198,7 +198,7 @@
                   <a
                     class="portfolio_popup"
                     href="#"
-                    @click.prevent="active = 11"
+                    @click.prevent="active = 12"
                   >
                     <img src="/img/thumbs/42-34.jpg" alt="" />
                     <div class="main" data-img-url="img/certifications.png"></div>
