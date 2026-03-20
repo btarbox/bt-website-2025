@@ -1384,6 +1384,10 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
+           <a href="https://caylent.com/blog/why-flat-tool-architectures-fail-and-how-amazon-bedrock-agent-core-enables-production-grade">
+           Why Flat Tool Architectures Fail and How Amazon Bedrock AgentCore Enables Production-Grade</a>
+           <br><br>
+
            <a href="https://caylent.com/blog/navigating-the-amazon-pinpoint-deprecation-what-you-need-to-know-and-do-before-october-2026">
            March 2026 Navigating the Amazon Pinpoint Deprecation: What You Need to Know (and Do) Before October 2026</a>
            <br><br>
@@ -1402,6 +1406,10 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
 
            <a href="https://caylent.com/blog/werner-vogels-final-keynote-renaissance-developers-explained">
            Jan 2026 Werner Vogels final keynote</a>
+           <br><br>
+
+           <a href="https://caylent.com/blog/the-infrastructure-behind-agentic-ai-key-takeaways-from-peter-desantis-and-dave-brown">
+           Jan 2026 The Infrastructure Behind Agentic AI</a>
            <br><br>
 
             <a href="https://caylent.com/blog/amazon-bedrock-agent-core-redefining-agent-infrastructure-as-undifferentiated-heavy-lifting">
