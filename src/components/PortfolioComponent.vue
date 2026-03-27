@@ -1385,7 +1385,7 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
            <a class="tooltip-link" href="https://caylent.com/blog/why-flat-tool-architectures-fail-and-how-amazon-bedrock-agent-core-enables-production-grade" 
-              data-tooltip="Flat architectures are limiting, learn how and why">
+              data-tooltip="As enterprise AI systems scale, flat tool architectures create complexity, cost, and security risks. Explore how hierarchical architectures with Amazon Bedrock AgentCore solve the problem.">
            Why Flat Tool Architectures Fail and How Amazon Bedrock AgentCore Enables Production-Grade</a>
            <br><br>
 
