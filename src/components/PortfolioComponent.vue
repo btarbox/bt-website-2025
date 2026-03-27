@@ -1389,7 +1389,7 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
            Why Flat Tool Architectures Fail and How Amazon Bedrock AgentCore Enables Production-Grade</a>
            <br><br>
 
-           <a class=tooltip-link" href="https://caylent.com/blog/navigating-the-amazon-pinpoint-deprecation-what-you-need-to-know-and-do-before-october-2026"
+           <a class="tooltip-link" href="https://caylent.com/blog/navigating-the-amazon-pinpoint-deprecation-what-you-need-to-know-and-do-before-october-2026"
             data-tooltip="AWS will end support for Amazon Pinpoint on October 30, 2026. Learn what's going away and what's surviving, what your migration options are, and how to quickly audit your environment to see your exposure.">
            March 2026 Navigating the Amazon Pinpoint Deprecation: What You Need to Know (and Do) Before October 2026</a>
            <br><br>
