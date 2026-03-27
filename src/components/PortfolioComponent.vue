@@ -1384,7 +1384,7 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
-           <a href="https://caylent.com/blog/why-flat-tool-architectures-fail-and-how-amazon-bedrock-agent-core-enables-production-grade">
+           <a href="https://caylent.com/blog/why-flat-tool-architectures-fail-and-how-amazon-bedrock-agent-core-enables-production-grade" title="Flat architectures are limiting">
            Why Flat Tool Architectures Fail and How Amazon Bedrock AgentCore Enables Production-Grade</a>
            <br><br>
 
