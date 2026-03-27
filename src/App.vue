@@ -51,7 +51,7 @@ export default {
     color: #fff;
     padding: 10px 14px !important;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 20;
     white-space: nowrap;
     opacity: 0;
     pointer-events: none;
