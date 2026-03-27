@@ -49,7 +49,7 @@ export default {
     transform: translateX(-50%) translateY(10px);
     background-color: #333;
     color: #fff;
-    padding: 8px 12px;
+    padding: 10px 14px !important;
     border-radius: 6px;
     font-size: 14px;
     white-space: nowrap;
@@ -57,6 +57,10 @@ export default {
     pointer-events: none;
     transition: all 0.3s ease;
     z-index: 9999 !important;
+    white-space: normal !important;      /* Allows text to wrap */
+    width: 250px !important;             /* Sets a fixed width */
+    line-height: 1.4 !important;         /* Improves readability of multi-line text */
+    text-align: center !important;       /* Keeps the text centered in the box */
 }
 
 .tooltip-link:hover::after {
