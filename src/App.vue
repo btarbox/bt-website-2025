@@ -56,10 +56,12 @@ export default {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 9999 !important;
 }
 
 .tooltip-link:hover::after {
+    display: inline-block !important;
+    position: relative;
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
