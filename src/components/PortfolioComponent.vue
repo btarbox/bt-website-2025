@@ -1394,11 +1394,13 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
            March 2026 Navigating the Amazon Pinpoint Deprecation: What You Need to Know (and Do) Before October 2026</a>
            <br><br>
 
-           <a href="https://caylent.com/blog/what-swamis-2025-reinvent-keynote-revealed-about-the-next-phase-of-ai-on-aws">
+           <a class="tooltip-link" href="https://caylent.com/blog/what-swamis-2025-reinvent-keynote-revealed-about-the-next-phase-of-ai-on-aws"
+            data-tooltip="Explore major advancements across the agentic AI stack announced during Swami Sivasubramanian's AWS re:Invent 2025 keynote—from updates to Amazon Bedrock, Kiro, and Strands Agents, to expanded fine-tuning options and powerful identity and memory capabilities within AgentCore.">
            Jan 2026 What Swami’s 2025 re:Invent Keynote Revealed About the Next Phase of AI on AWS</a>
            <br><br>
 
-           <a href="https://caylent.com/blog/what-dr-ruba-bornos-2025-reinvent-keynote-means-for-aws-partners">
+           <a class="tooltip-link" href="https://caylent.com/blog/what-dr-ruba-bornos-2025-reinvent-keynote-means-for-aws-partners"
+             data-tooltip="Explore all the exciting announcements from Dr. Ruba Borno's partner keynote. From the general availability of AWS Transform compatibility to new AWS Marketplace capabilities, the updates showcased powerful new ways for partners to deliver value.">
            Jan 2026 What Dr. Ruba Borno’s 2025 re:Invent Keynote Means for AWS Partners</a>
            <br><br>
 
