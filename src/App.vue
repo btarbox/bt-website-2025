@@ -32,3 +32,36 @@ export default {
   components: { PreLoader, Cursor },
 };
 </script>
+
+<style>
+/* --- TOOLTIP STYLES START --- */
+.tooltip-link {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-link::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.tooltip-link:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+/* --- TOOLTIP STYLES END --- */
+</style>
