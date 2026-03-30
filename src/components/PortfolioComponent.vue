@@ -1404,11 +1404,13 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
            Jan 2026 What Dr. Ruba Borno’s 2025 re:Invent Keynote Means for AWS Partners</a>
            <br><br>
 
-           <a href="https://caylent.com/blog/securing-ai-agents-on-aws-designing-autonomous-systems-you-can-actually-trust">
+           <a class="tooltip-link" href="https://caylent.com/blog/securing-ai-agents-on-aws-designing-autonomous-systems-you-can-actually-trust"
+             data-tooltip="AI agents represent the next evolution of APIs, but they also bring new security challenges and attack vectors. Examine real-world adversarial threats and learn defensive strategies in this blog.">
            Jan 2026 Securing AI Agents on AWS: Designing Autonomous Systems You Can Actually Trust</a>
            <br><br>
 
-           <a href="https://caylent.com/blog/werner-vogels-final-keynote-renaissance-developers-explained">
+           <a class="tooltip-link" href="https://caylent.com/blog/werner-vogels-final-keynote-renaissance-developers-explained"
+            data-tooltip="In Werner Vogels’ 2025 AWS re:Invent keynote, he reminded us that as technology continues to evolve, developers must evolve too. Discover how engineers are becoming “renaissance developers” and why ownership matters more than ever.">
            Jan 2026 Werner Vogels final keynote</a>
            <br><br>
 
