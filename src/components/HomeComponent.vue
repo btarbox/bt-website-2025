@@ -67,7 +67,7 @@
                 src='/img/badges/AWSHeroes.png'/>
               <img 
                 class="skills figma anim_moveBottom" 
-                src='/img/badges/ClaudeArchEarlyAdopter.jpg.png'/>
+                src='/img/badges/ClaudeArchEarlyAdopter.jpg'/>
             </div>
           </div>
         </div>
