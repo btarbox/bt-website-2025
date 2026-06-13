@@ -1384,6 +1384,12 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
+           <a class="tooltip-link" href="https://books.by/brian-tarbox/on-programming-minds-and-the" 
+              <img src="img/presentations/BrianBookCover.png" width="200" height="200">
+              data-tooltip="My new book on the confluence of programming, Dolphin Intelligence and Artificial Intelligence.">
+           The book is what happens when a neurodivergent engineer who once did language research with dolphins tries to explain what everyone in the AI industry is getting wrong — and why it matters more than the demos suggest.</a>
+           <br><br>
+
            <a class="tooltip-link" href="https://caylent.com/blog/why-flat-tool-architectures-fail-and-how-amazon-bedrock-agent-core-enables-production-grade" 
               data-tooltip="As enterprise AI systems scale, flat tool architectures create complexity, cost, and security risks. Explore how hierarchical architectures with Amazon Bedrock AgentCore solve the problem.">
            Why Flat Tool Architectures Fail and How Amazon Bedrock AgentCore Enables Production-Grade</a>
