@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Library</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IM+Fell+English:ital@0;1&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: radial-gradient(ellipse at 50% 30%, #2a1c0e 0%, #0d0804 70%);
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'IM Fell English', serif;
+    position: relative;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: -60px; left: 50%;
+    transform: translateX(-50%);
+    width: 900px; height: 300px;
+    background: radial-gradient(ellipse, rgba(255,154,60,0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #room {
+    position: relative;
+    width: 100vw; height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    scrollbar-width: none;
+  }
+  #room::-webkit-scrollbar { display: none; }
+  #room.grabbing { cursor: grabbing; }
+
+  .shelf-unit {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.8));
+    margin: 0 40px;
+  }
+
+  .shelf-row { position: relative; display: flex; flex-direction: column; }
+
+  .book-row {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 18px;
+    gap: 3px;
+    height: 145px;
+    background: linear-gradient(to bottom, rgba(20,10,4,0.0) 0%, rgba(20,10,4,0.3) 100%);
+    position: relative;
+  }
+
+  .book-row::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 40px;
+    background: linear-gradient(to bottom, rgba(255,180,80,0.06), transparent);
+    pointer-events: none;
+  }
+
+  .shelf-plank {
+    height: 22px;
+    position: relative;
+    background:
+      repeating-linear-gradient(90deg, transparent 0px, rgba(255,255,255,0.015) 2px, transparent 4px, rgba(0,0,0,0.08) 8px, transparent 12px),
+      linear-gradient(to bottom, #8b5a2b 0%, #7a4a22 30%, #5c3317 70%, #3b2310 100%);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,200,120,0.25), inset 0 -1px 0 rgba(0,0,0,0.4);
+  }
+  .shelf-plank::after {
+    content: '';
+    position: absolute;
+    bottom: -6px; left: 0; right: 0; height: 6px;
+    background: linear-gradient(to bottom, #4a2c10, #2a1a08);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.7);
+  }
+
+  .shelf-unit::before, .shelf-unit::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; width: 18px;
+    background: linear-gradient(to right, #2a1a0a, #5c3317 40%, #3b2310 100%);
+    z-index: 10;
+    box-shadow: inset -2px 0 4px rgba(0,0,0,0.4);
+  }
+  .shelf-unit::before { left: 0; }
+  .shelf-unit::after  { right: 0; box-shadow: inset 2px 0 4px rgba(0,0,0,0.4); }
+
+  /* ── BOOKS ── */
+  .book {
+    flex-shrink: 0;
+    border-radius: 1px 2px 2px 1px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    transform-origin: bottom center;
+  }
+  .book:hover {
+    transform: translateY(-14px) scale(1.05);
+    filter: brightness(1.3);
+    z-index: 20;
+  }
+
+  .book-spine {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 4px;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid rgba(255,255,255,0.08);
+    border-right: 1px solid rgba(0,0,0,0.4);
+  }
+  .book-spine::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 2px;
+    width: 3px; height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.05) 40%, transparent 100%);
+  }
+
+  .book-title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(8px, 1vw, 12px);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    color: rgba(255,255,255,0.92);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+    flex: 1;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-height: 115px;
+    overflow: hidden;
+  }
+  .book-author {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: clamp(6px, 0.75vw, 9px);
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.06em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.9);
+    white-space: nowrap;
+    overflow: hidden;
+    max-height: 80px;
+  }
+  .book-accent {
+    width: 70%; height: 1px;
+    background: rgba(255,255,255,0.2);
+    flex-shrink: 0;
+  }
+
+  /* decor */
+  .decor { flex-shrink: 0; display: flex; align-items: flex-end; }
+  .bookend {
+    width: 16px; height: 80px;
+    background: linear-gradient(135deg, #888 0%, #555 50%, #333 100%);
+    border-radius: 2px 2px 0 0;
+    box-shadow: 2px 0 6px rgba(0,0,0,0.5);
+    position: relative;
+  }
+  .bookend::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: -6px;
+    width: 22px; height: 4px;
+    background: #444; border-radius: 1px;
+  }
+  .plant { width: 30px; height: 70px; position: relative; }
+  .plant-pot {
+    position: absolute;
+    bottom: 0; left: 5px;
+    width: 20px; height: 16px;
+    background: linear-gradient(to bottom, #8b4513, #5c2e0a);
+    border-radius: 1px 1px 3px 3px;
+  }
+  .candle-wrap { width: 20px; height: 90px; position: relative; }
+  .candle-body {
+    position: absolute;
+    bottom: 0; left: 4px;
+    width: 12px; height: 60px;
+    background: linear-gradient(to right, #f5e6c8 0%, #ede0b8 50%, #d4c090 100%);
+    border-radius: 2px 2px 0 0;
+  }
+  .candle-flame {
+    position: absolute;
+    bottom: 62px; left: 8px;
+    width: 6px; height: 14px;
+    background: radial-gradient(ellipse at 50% 80%, #fff 0%, #ffdd00 30%, #ff8800 70%, transparent 100%);
+    border-radius: 50% 50% 30% 30%;
+    animation: flicker 1.8s ease-in-out infinite alternate;
+    transform-origin: bottom center;
+  }
+  @keyframes flicker {
+    0%   { transform: scaleX(1)   scaleY(1)   rotate(-2deg); opacity: 0.95; }
+    40%  { transform: scaleX(0.9) scaleY(1.08) rotate(1deg);  opacity: 1;    }
+    100% { transform: scaleX(1.1) scaleY(0.95) rotate(3deg);  opacity: 0.9;  }
+  }
+
+  /* ── HEADER ── */
+  #header {
+    position: fixed;
+    top: 24px; left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 50;
+    pointer-events: none;
+  }
+  #header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(18px, 3vw, 38px);
+    font-weight: 400; font-style: italic;
+    color: rgba(255, 210, 140, 0.85);
+    letter-spacing: 0.12em;
+    text-shadow: 0 2px 20px rgba(255,140,40,0.3), 0 0 40px rgba(0,0,0,0.9);
+  }
+  #header p {
+    font-size: clamp(10px, 1.2vw, 14px);
+    color: rgba(200, 160, 90, 0.5);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* ── COVER MODAL ── */
+  #cover-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 2, 0, 0.82);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(6px);
+  }
+  #cover-overlay.visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  #cover-card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+    max-width: 680px;
+    width: 90vw;
+    max-height: 88vh;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px rgba(255,200,120,0.15),
+      0 40px 120px rgba(0,0,0,0.95),
+      0 0 80px rgba(180,100,30,0.12);
+    transform: scale(0.92) translateY(16px);
+    transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
+  }
+  #cover-overlay.visible #cover-card {
+    transform: scale(1) translateY(0);
+  }
+
+  /* Left: the book cover image */
+  #cover-image-wrap {
+    width: 260px;
+    min-width: 200px;
+    flex-shrink: 0;
+    position: relative;
+    background: #1a0e06;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  #cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  #cover-img.loaded { opacity: 1; }
+
+  /* fallback cover card (shown when no image) */
+  #cover-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    gap: 12px;
+  }
+  #cover-fallback .fb-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(14px, 2.5vw, 22px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgba(255,230,180,0.95);
+  }
+  #cover-fallback .fb-rule {
+    width: 40px; height: 1px;
+    background: rgba(255,200,100,0.4);
+  }
+  #cover-fallback .fb-author {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: clamp(10px, 1.5vw, 14px);
+    color: rgba(200,160,90,0.75);
+  }
+
+  /* spinner */
+  #cover-spinner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .spinner-ring {
+    width: 36px; height: 36px;
+    border: 2px solid rgba(255,200,100,0.15);
+    border-top-color: rgba(255,200,100,0.7);
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Right: info panel */
+  #cover-info {
+    flex: 1;
+    padding: 36px 32px;
+    background: linear-gradient(135deg, #1c1008 0%, #110c06 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+  }
+
+  #cover-info .info-eyebrow {
+    font-family: sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(200,160,90,0.45);
+  }
+  #cover-info .info-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(18px, 3vw, 28px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: rgba(255,230,170,0.97);
+  }
+  #cover-info .info-author {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: clamp(13px, 1.8vw, 17px);
+    color: rgba(220,180,110,0.75);
+    margin-top: -8px;
+  }
+  #cover-info .info-divider {
+    width: 48px; height: 1px;
+    background: linear-gradient(to right, rgba(255,200,100,0.4), transparent);
+  }
+  #cover-info .info-desc {
+    font-family: 'IM Fell English', serif;
+    font-size: clamp(12px, 1.4vw, 15px);
+    line-height: 1.7;
+    color: rgba(210,180,130,0.65);
+    flex: 1;
+  }
+  #cover-info .info-tap-hint {
+    font-family: sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(180,140,80,0.3);
+    margin-top: auto;
+    padding-top: 20px;
+  }
+
+  /* ── EDIT PANEL ── */
+  #edit-toggle {
+    position: fixed;
+    bottom: 20px; right: 20px;
+    background: rgba(60,30,10,0.85);
+    border: 1px solid rgba(255,160,60,0.3);
+    color: rgba(255,200,120,0.8);
+    font-family: 'IM Fell English', serif;
+    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 100;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s;
+  }
+  #edit-toggle:hover { background: rgba(80,40,15,0.95); color: rgba(255,220,150,1); }
+
+  #edit-panel {
+    position: fixed;
+    bottom: 60px; right: 20px;
+    width: 360px; max-height: 70vh;
+    background: rgba(20,10,4,0.96);
+    border: 1px solid rgba(255,160,60,0.25);
+    border-radius: 4px;
+    padding: 20px;
+    z-index: 99;
+    display: none;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  }
+  #edit-panel.open { display: block; }
+  #edit-panel h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: rgba(255,200,120,0.9);
+    margin-bottom: 8px;
+    font-weight: 400; font-style: italic;
+  }
+  #edit-panel p {
+    font-size: 11px;
+    color: rgba(200,160,90,0.6);
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-family: sans-serif;
+  }
+  #book-input {
+    width: 100%; height: 220px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,160,60,0.2);
+    border-radius: 2px;
+    color: rgba(255,220,160,0.9);
+    font-family: monospace;
+    font-size: 11px;
+    padding: 10px;
+    resize: vertical;
+    outline: none;
+    line-height: 1.6;
+  }
+  #apply-btn {
+    margin-top: 10px; width: 100%; padding: 9px;
+    background: linear-gradient(135deg, #7a4a22, #5c3317);
+    border: 1px solid rgba(255,160,60,0.3);
+    color: rgba(255,220,150,0.95);
+    font-family: 'IM Fell English', serif;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  #apply-btn:hover { background: linear-gradient(135deg, #9a6030, #7a4a22); }
+
+  /* ── SCROLL HINT ── */
+  #scroll-hint {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255, 200, 100, 0.5);
+    pointer-events: none;
+    transition: opacity 1s ease;
+    z-index: 50;
+  }
+</style>
+</head>
+<body>
+
+<div id="header">
+  <h1>My Library</h1>
+  <p>A life in reading</p>
+</div>
+
+<div id="room">
+  <div class="shelf-unit" id="shelf-unit"></div>
+</div>
+
+<!-- Cover Modal -->
+<div id="cover-overlay">
+  <div id="cover-card">
+    <div id="cover-image-wrap">
+      <div id="cover-spinner"><div class="spinner-ring"></div></div>
+      <div id="cover-fallback" style="display:none;"></div>
+      <img id="cover-img" alt="Book cover" />
+    </div>
+    <div id="cover-info">
+      <div class="info-eyebrow">Now on your shelf</div>
+      <div class="info-title" id="modal-title"></div>
+      <div class="info-author" id="modal-author"></div>
+      <div class="info-divider"></div>
+      <div class="info-desc" id="modal-desc">Fetching cover from Open Library…</div>
+      <div class="info-tap-hint">Tap anywhere to close</div>
+    </div>
+  </div>
+</div>
+
+<button id="edit-toggle" onclick="toggleEdit()">✎ Edit Book List</button>
+<div id="edit-panel">
+  <h3>Your Books</h3>
+  <p>One book per line. Format: <em>Title | Author</em> (author is optional)</p>
+  <textarea id="book-input"></textarea>
+  <button id="apply-btn" onclick="applyBooks()">Update Shelf</button>
+</div>
+
+<script>
+const DEFAULT_BOOKS = [
+  { title: "Inferno (Robert Langdon, #4)", author: "Dan Brown", isbn: "" },
+  { title: "The Highly Sensitive Person in Love: Understanding and Managing Relationships When the World Overwhelms You", author: "Elaine N. Aron", isbn: "" },
+  { title: "Predator: The Remote-Control Air War Over Iraq and Afghanistan: A Pilot's Story", author: "Matthew J. Martin", isbn: "9781616739867" },
+  { title: "Mockingjay (The Hunger Games, #3)", author: "Suzanne Collins", isbn: "" },
+  { title: "Cold Days (The Dresden Files, #14)", author: "Jim Butcher", isbn: "9781101617007" },
+  { title: "Artemis", author: "Andy Weir", isbn: "" },
+  { title: "Programming in Scala: Updated for Scala 2.12", author: "Martin Odersky", isbn: "9780981531687" },
+  { title: "Catching Fire (The Hunger Games, #2)", author: "Suzanne Collins", isbn: "" },
+  { title: "The Atlantis Plague (The Origin Mystery, #2)", author: "A.G. Riddle", isbn: "9781940026022" },
+  { title: "Dark Matter and the Dinosaurs: The Astounding Interconnectedness of the Universe", author: "Lisa Randall", isbn: "9780062328519" },
+  { title: "Children of the Mind (Ender's Saga, #4)", author: "Orson Scott Card", isbn: "9780765304742" },
+  { title: "Darwin's Radio (Darwin's Radio, #1)", author: "Greg Bear", isbn: "9780345459817" },
+  { title: "Shadow of the Hegemon (The Shadow Series, #2)", author: "Orson Scott Card", isbn: "9780812565959" },
+  { title: "Seventh Son (Tales of Alvin Maker, #1)", author: "Orson Scott Card", isbn: "9780765347756" },
+  { title: "The Tombs of Atuan (Earthsea Cycle, #2)", author: "Ursula K. Le Guin", isbn: "9780689845369" },
+  { title: "The Left Hand of Darkness", author: "Ursula K. Le Guin", isbn: "" },
+  { title: "The Other Wind (Earthsea Cycle, #6)", author: "Ursula K. Le Guin", isbn: "9780441011254" },
+  { title: "Tehanu (Earthsea Cycle, #4)", author: "Ursula K. Le Guin", isbn: "9781416509639" },
+  { title: "The Visual Display of Quantitative Information", author: "Edward R. Tufte", isbn: "9780961392147" },
+  { title: "Envisioning Information", author: "Edward R. Tufte", isbn: "9780961392116" },
+  { title: "Visual Explanations: Images and Quantities, Evidence and Narrative", author: "Edward R. Tufte", isbn: "9780961392123" },
+  { title: "The Chronicles of Narnia (The Chronicles of Narnia, #1-7)", author: "C.S. Lewis", isbn: "9780066238500" },
+  { title: "The Lion, the Witch and the Wardrobe (Chronicles of Narnia, #1)", author: "C.S. Lewis", isbn: "" },
+  { title: "The Voyage of the Dawn Treader (Chronicles of Narnia, #3)", author: "C.S. Lewis", isbn: "9780061125270" },
+  { title: "The Magician’s Nephew (Chronicles of Narnia, #6)", author: "C.S. Lewis", isbn: "9780060764906" },
+  { title: "Prince Caspian (Chronicles of Narnia, #2)", author: "C.S. Lewis", isbn: "9780007202300" },
+  { title: "The Fellowship of the Ring (The Lord of the Rings, #1)", author: "J.R.R. Tolkien", isbn: "9780618346257" },
+  { title: "The Hobbit, or There and Back Again", author: "J.R.R. Tolkien", isbn: "" },
+  { title: "The Two Towers (The Lord of the Rings, #2)", author: "J.R.R. Tolkien", isbn: "9780618346264" },
+  { title: "Writing for Story: Craft Secrets of Dramatic Nonfiction (Reference)", author: "Jon Franklin", isbn: "9780452272958" },
+  { title: "Flowers for Algernon", author: "Daniel Keyes", isbn: "9780156030083" },
+  { title: "The Design of Everyday Things", author: "Donald A. Norman", isbn: "9780465067107" },
+  { title: "The Pragmatic Programmer: From Journeyman to Master", author: "Andy Hunt", isbn: "9780201616224" },
+  { title: "The Farthest Shore (Earthsea Cycle, #3)", author: "Ursula K. Le Guin", isbn: "9781416509646" },
+  { title: "Gifts (Annals of the Western Shore, #1)", author: "Ursula K. Le Guin", isbn: "9780152051242" },
+  { title: "The Word for World Is Forest", author: "Ursula K. Le Guin", isbn: "" },
+  { title: "The Wind's Twelve Quarters", author: "Ursula K. Le Guin", isbn: "9780553029079" },
+  { title: "Always Coming Home", author: "Ursula K. Le Guin", isbn: "9780520227354" },
+  { title: "Foundation's Triumph (Second Foundation Trilogy, #3)", author: "David Brin", isbn: "9780061056390" },
+  { title: "The Practice Effect", author: "David Brin", isbn: "9780553269819" },
+  { title: "The River of Time", author: "David Brin", isbn: "9781857234138" },
+  { title: "The Transparent Society: Will Technology Force Us to Choose Between Privacy and Freedom?", author: "David Brin", isbn: "9780738201443" },
+  { title: "The Life Eaters", author: "David Brin", isbn: "9781401200992" },
+  { title: "Heart of the Comet", author: "David Brin", isbn: "9780553258394" },
+  { title: "The Crystal Spheres", author: "David Brin", isbn: "" },
+  { title: "2001: A Space Odyssey (Space Odyssey, #1)", author: "Arthur C. Clarke", isbn: "" },
+  { title: "2010: Odyssey Two (Space Odyssey #2)", author: "Arthur C. Clarke", isbn: "9780345413970" },
+  { title: "Childhood’s End", author: "Arthur C. Clarke", isbn: "" },
+  { title: "2061: Odyssey Three  (Space Odyssey, #3)", author: "Arthur C. Clarke", isbn: "9780586203194" },
+  { title: "3001: The Final Odyssey", author: "Arthur C. Clarke", isbn: "9780345438201" },
+  { title: "The Wizardry Cursed (Wiz, #3)", author: "Rick Cook", isbn: "9780671720490" },
+  { title: "Wizard's Bane (Wiz, #1)", author: "Rick Cook", isbn: "9780671698034" },
+  { title: "The Wizardry Compiled (Wiz, #2)", author: "Rick Cook", isbn: "9780671698560" },
+  { title: "The Wizardry Consulted (Wiz, #4)", author: "Rick Cook", isbn: "9780671877002" },
+  { title: "The Wizardry Quested (Wiz, #5)", author: "Rick Cook", isbn: "9780671877088" },
+  { title: "Book of the Hopi", author: "Frank Waters", isbn: "9780140045277" },
+  { title: "In the Beginning: Creation Stories from Around the World", author: "Virginia Hamilton", isbn: "9780152387426" },
+  { title: "The Power of Myth", author: "Joseph Campbell", isbn: "9780385418867" },
+  { title: "I Know It When I See It: A Modern Fable About Quality", author: "John Guaspari", isbn: "9780814473931" },
+  { title: "Pragmatic Thinking and Learning: Refactor Your Wetware", author: "Andy Hunt", isbn: "9781934356050" },
+  { title: "The Elements of Programming Style", author: "Brian W. Kernighan", isbn: "9780070342071" },
+  { title: "Peopleware: Productive Projects and Teams", author: "Tom DeMarco", isbn: "9780932633439" },
+  { title: "Best Kept Secrets of Peer Code Review: Modern Approach. Practical Advice. (Modern Approach. Practical Advice.)", author: "Jason Cohen", isbn: "9781599160672" },
+  { title: "Spring in Action", author: "Craig Walls", isbn: "9781933988139" },
+  { title: "Groovy in Action", author: "Dierk Koenig", isbn: "9781932394849" },
+  { title: "Debug It!: Find, Repair, and Prevent Bugs in Your Code (Pragmatic Programmers)", author: "Paul Butcher", isbn: "9781934356289" },
+  { title: "The War Against Boys: How Misguided Policies are Harming Our Young Men", author: "Christina Hoff Sommers", isbn: "9781501125423" },
+  { title: "Introduction to Automata Theory, Languages, and Computation", author: "John E. Hopcroft", isbn: "9780201029888" },
+  { title: "Microserfs", author: "Douglas Coupland", isbn: "9780060987046" },
+  { title: "Behind Closed Doors: Secrets of Great Management (Pragmatic Programmers)", author: "Johanna Rothman", isbn: "9780976694021" },
+  { title: "Showstopper! the Breakneck Race to Create Windows NT and the Next Generation at Microsoft", author: "G. Pascal Zachary", isbn: "9780759285781" },
+  { title: "Calendar", author: "David Ewing Duncan", isbn: "" },
+  { title: "Seven Languages in Seven Weeks: A Pragmatic Guide to Learning Programming Languages (Pragmatic Programmers)", author: "Bruce A. Tate", isbn: "9781934356593" },
+  { title: "Tractatus Logico-Philosophicus", author: "Ludwig Wittgenstein", isbn: "9780415254083" },
+  { title: "Philosophical Investigations", author: "Ludwig Wittgenstein", isbn: "9780631231271" },
+  { title: "On Certainty", author: "Ludwig Wittgenstein", isbn: "9780061316869" },
+  { title: "Ludwig Wittgenstein: The Duty of Genius", author: "Ray Monk", isbn: "9780140159950" },
+  { title: "The Blue and Brown Books", author: "Ludwig Wittgenstein", isbn: "9780061312113" },
+  { title: "Wittgenstein, Mind and Meaning (Towards a Social Conception of Mind)", author: "Meredith Williams", isbn: "9780415287562" },
+  { title: "Process and Reality: An Essay in Cosmology", author: "Alfred North Whitehead", isbn: "9780029345702" },
+  { title: "Babylon 5: In the Beginning", author: "Peter David", isbn: "9780345483638" },
+  { title: "The Long Night of Centauri Prime (Babylon 5: Legions of Fire, #1)", author: "Peter David", isbn: "9780345427182" },
+  { title: "Dark Genesis: The Birth of the Psi Corps (Babylon 5: Saga of Psi Corps, #1)", author: "J. Gregory Keyes", isbn: "9780345427151" },
+  { title: "Babylon 5: In Valen's Name (Babylon 5)", author: "J. Michael Straczynski", isbn: "9781852869816" },
+  { title: "Final Reckoning: The Fate of Bester (Babylon 5: Saga of Psi Corps, #3)", author: "J. Gregory Keyes", isbn: "9780345427175" },
+  { title: "Armies of Light and Dark (Babylon 5: Legions of Fire, #2)", author: "Peter David", isbn: "9780345427199" },
+  { title: "Deadly Relations: Bester Ascendant (Babylon 5: Saga of Psi Corps, #2)", author: "J. Gregory Keyes", isbn: "9780345427168" },
+  { title: "Freedom Flight (Wing Commander, #1)", author: "Mercedes Lackey", isbn: "9780671721459" },
+  { title: "End Run (Wing Commander, #2)", author: "Christopher Stasheff", isbn: "9780671722005" },
+  { title: "Fleet Action (Wing Commander 3)", author: "William R. Forstchen", isbn: "9780671722111" },
+  { title: "Heart Of The Tiger (Wing Commander 4)", author: "William R. Forstchen", isbn: "9780671876531" },
+  { title: "Action Stations (Wing Commander, #5)", author: "William R. Forstchen", isbn: "9780671878597" },
+  { title: "Writing a Novel with Scrivener", author: "David Hewson", isbn: "" },
+  { title: "Existence", author: "David Brin", isbn: "9780765303615" },
+  { title: "Agile Retrospectives: Making Good Teams Great", author: "Esther Derby", isbn: "9780977616640" },
+  { title: "Driving Technical Change: Why People on Your Team Don't Act on Good Ideas, and How to Convince Them They Should", author: "Terrence Ryan", isbn: "9781934356609" },
+  { title: "Practices of an Agile Developer (Pragmatic Bookshelf)", author: "Venkat Subramaniam", isbn: "9780974514086" },
+  { title: "Programming Concurrency on the JVM: Mastering Synchronization, STM, and Actors", author: "Venkat Subramaniam", isbn: "9781934356760" },
+  { title: "Programming in Scala: A Comprehensive Step-by-step Guide", author: "Martin Odersky", isbn: "9780981531601" },
+  { title: "Scala in Depth", author: "Joshua Suereth", isbn: "9781935182702" },
+  { title: "Scala for the Impatient", author: "Cay S. Horstmann", isbn: "9780321774095" },
+  { title: "SQL Antipatterns: Avoiding the Pitfalls of Database Programming (Pragmatic Programmers)", author: "Bill Karwin", isbn: "9781934356555" },
+  { title: "Seven Databases in Seven Weeks: A Guide to Modern Databases and the NoSQL Movement", author: "Eric Redmond", isbn: "9781934356920" },
+  { title: "The Second Ship (The Rho Agenda, #1)", author: "Richard Phillips", isbn: "9780981546261" },
+  { title: "Immune (The Rho Agenda, #2)", author: "Richard Phillips", isbn: "" },
+  { title: "Wormhole (The Rho Agenda, #3)", author: "Richard Phillips", isbn: "" },
+  { title: "The Slow Regard of Silent Things (The Kingkiller Chronicle, #2.5)", author: "Patrick Rothfuss", isbn: "9780756410438" },
+  { title: "Leviathan Wakes (The Expanse, #1)", author: "James S.A. Corey", isbn: "9781841499888" },
+  { title: "Effective Akka: Patterns and Best Practices", author: "Jamie Allen", isbn: "9781449360078" },
+  { title: "Nemesis Games (The Expanse, #5)", author: "James S.A. Corey", isbn: "9780316217590" },
+  { title: "Furiously Happy: A Funny Book About Horrible Things", author: "Jenny Lawson", isbn: "" },
+  { title: "Cibola Burn (Expanse, #4)", author: "James S.A. Corey", isbn: "9780316217606" },
+  { title: "Your Life as Story: Discovering the \"new Autobiography\" and Writing Memoir as Literature", author: "Tristine Rainer", isbn: "9780874779226" },
+  { title: "Abaddon's Gate (Expanse, #3)", author: "James S.A. Corey", isbn: "9780316235426" },
+  { title: "Caliban's War (Expanse, #2)", author: "James S.A. Corey", isbn: "" },
+  { title: "Skin Game (The Dresden Files, #15)", author: "Jim Butcher", isbn: "9780698157897" },
+  { title: "Son (The Giver, #4)", author: "Lois Lowry", isbn: "" },
+  { title: "Messenger (The Giver, #3)", author: "Lois Lowry", isbn: "9780547345895" },
+  { title: "Shift (Silo, #2)", author: "Hugh Howey", isbn: "" },
+  { title: "Dust (Silo, #3)", author: "Hugh Howey", isbn: "" },
+  { title: "Wool (Silo, #1)", author: "Hugh Howey", isbn: "" },
+  { title: "The Martian", author: "Andy Weir", isbn: "" },
+  { title: "Allegiant (Divergent, #3)", author: "Veronica Roth", isbn: "" },
+  { title: "Insurgent (Divergent, #2)", author: "Veronica Roth", isbn: "" },
+  { title: "Divergent (Divergent, #1)", author: "Veronica Roth", isbn: "" },
+  { title: "Story Physics: Harnessing the Underlying Forces of Storytelling", author: "Larry Brooks", isbn: "9781599636955" },
+  { title: "Writing Places: The Life Journey of a Writer and Teacher – An Inspiring Memoir on Journalism, Craft, and the Art of Teaching", author: "William Zinsser", isbn: "" },
+  { title: "Lesterland: The Corruption of Congress and How to End It", author: "Lawrence Lessig", isbn: "9781937382346" },
+  { title: "The American Bible-Whose America Is This?: How Our Words Unite, Divide, and Define a Nation", author: "Stephen Prothero", isbn: "9780062123459" },
+  { title: "Steering the Craft: Exercises and Discussions on Story Writing for the Lone Navigator or the Mutinous Crew", author: "Ursula K. Le Guin", isbn: "9780933377462" },
+  { title: "Aspects of the Novel", author: "E.M. Forster", isbn: "9780795309564" },
+  { title: "Four Ways to Forgiveness (Hainish Cycle, #7)", author: "Ursula K. Le Guin", isbn: "9780060760298" },
+  { title: "World Religions", author: "John Bowker", isbn: "9780756617721" },
+  { title: "Ghost Story (The Dresden Files, #13)", author: "Jim Butcher", isbn: "9781101476178" },
+  { title: "The Loom of Thessaly", author: "David Brin", isbn: "" },
+  { title: "Tank Farm Dynamo", author: "David Brin", isbn: "" },
+  { title: "A Planet of Viruses", author: "Carl Zimmer", isbn: "9780226983332" },
+  { title: "The Five People You Meet in Heaven", author: "Mitch Albom", isbn: "" },
+  { title: "The Night Circus", author: "Erin Morgenstern", isbn: "9780385534635" },
+  { title: "Stage Performance", author: "Livingston Taylor", isbn: "9780671039714" },
+  { title: "The Three Questions", author: "Jon J. Muth", isbn: "9780439199964" },
+  { title: "Zen and the Art of Motorcycle Maintenance: An Inquiry Into Values (Phaedrus, #1)", author: "Robert M. Pirsig", isbn: "9780060589462" },
+  { title: "Let's Pretend This Never Happened: A Mostly True Memoir", author: "Jenny Lawson", isbn: "9780399159015" },
+  { title: "The Wise Man's Fear (The Kingkiller Chronicle, #2)", author: "Patrick Rothfuss", isbn: "" },
+  { title: "The Golden Compass (His Dark Materials, #1)", author: "Philip Pullman", isbn: "9780679879244" },
+  { title: "Harry Potter and the Sorcerer's Stone (Harry Potter, #1)", author: "J.K. Rowling", isbn: "9780439554930" },
+  { title: "Dead Beat (The Dresden Files, #7)", author: "Jim Butcher", isbn: "9780451460912" },
+  { title: "A Fine and Private Place", author: "Peter S. Beagle", isbn: "9780451450968" },
+  { title: "The Signal and the Noise: Why So Many Predictions Fail—But Some Don't", author: "Nate Silver", isbn: "9781594204111" },
+  { title: "The Catcher in the Rye", author: "J.D. Salinger", isbn: "9780316769174" },
+  { title: "The Information: A History, a Theory, a Flood", author: "James Gleick", isbn: "9780307379573" },
+  { title: "Are We Smart Enough to Know How Smart Animals Are?", author: "Frans de Waal", isbn: "9780393246186" },
+  { title: "Fluency (Confluence, #1)", author: "Jennifer Foehner Wells", isbn: "9780990479802" },
+  { title: "Remanence (Confluence, #2)", author: "Jennifer Foehner Wells", isbn: "" },
+  { title: "Contact", author: "Carl Sagan", isbn: "9782266079990" },
+  { title: "Foundation and Empire (Foundation, #2)", author: "Isaac Asimov", isbn: "9780553803723" },
+  { title: "Second Foundation (Foundation, #3)", author: "Isaac Asimov", isbn: "9780553803730" },
+  { title: "The Godwhale (The Hive, #2)", author: "T.J. Bass", isbn: "9780413346704" },
+  { title: "Gödel, Escher, Bach: An Eternal Golden Braid", author: "Douglas R. Hofstadter", isbn: "9780465026562" },
+  { title: "The Age of the Unthinkable: Why the New World Disorder Constantly Surprises Us And What We Can Do About It", author: "Joshua Cooper Ramo", isbn: "9780316118088" },
+  { title: "Social Intelligence: The New Science of Human Relationships", author: "Daniel Goleman", isbn: "9780553803525" },
+  { title: "The Long Tail: Why the Future of Business is Selling Less of More", author: "Chris Anderson", isbn: "9781401302375" },
+  { title: "What the Dog Saw and Other Adventures", author: "Malcolm Gladwell", isbn: "9780316078573" },
+  { title: "Outliers: The Story of Success", author: "Malcolm Gladwell", isbn: "9780316017923" },
+  { title: "The Tipping Point: How Little Things Can Make a Big Difference", author: "Malcolm Gladwell", isbn: "" },
+  { title: "Blink: The Power of Thinking Without Thinking", author: "Malcolm Gladwell", isbn: "9780316010665" },
+  { title: "Artificial Intelligence and Tutoring Systems: Computational and Cognitive Approaches to the Communication of Knowledge", author: "Etienne Wenger", isbn: "9780934613262" },
+  { title: "Dolphin Cognition and Behavior: A Comparative Approach", author: "Ronald J. Schusterman", isbn: "9780898596656" },
+  { title: "Quiet: The Power of Introverts in a World That Can't Stop Talking", author: "Susan Cain", isbn: "" },
+  { title: "Salt Sugar Fat: How the Food Giants Hooked Us", author: "Michael Moss", isbn: "" },
+  { title: "God Is Not One: A Study of Religious Diversity and Doctrinal Differences", author: "Stephen Prothero", isbn: "9780061991202" },
+  { title: "1491: New Revelations of the Americas Before Columbus", author: "Charles C. Mann", isbn: "9781400032051" },
+  { title: "Power, Sex, Suicide: Mitochondria and the Meaning of Life", author: "Nick Lane", isbn: "" },
+  { title: "The Last Lecture", author: "Randy Pausch", isbn: "" },
+  { title: "The Economic Consequences of the Peace", author: "John Maynard Keynes", isbn: "" },
+  { title: "How Buildings Learn: What Happens After They're Built", author: "Stewart Brand", isbn: "9780140139969" },
+  { title: "Lab Girl", author: "Hope Jahren", isbn: "9781101874936" },
+  { title: "Music Theory for Dummies", author: "Michael Pilhofer", isbn: "9780764578380" },
+  { title: "Music Composition For Dummies", author: "Scott Jarrett", isbn: "9780470224212" },
+  { title: "Slipping into Darkness", author: "Peter Blauner", isbn: "9780446617475" },
+  { title: "SEAL Team Six: The Heart and the Fist", author: "Anonymous", isbn: "" },
+  { title: "The Things They Carried", author: "Tim O'Brien", isbn: "" },
+  { title: "Steel Boat, Iron Hearts: A U-boat Crewman's Life Aboard U-505", author: "Hans Goebeler", isbn: "" },
+  { title: "The Gatekeepers: Inside the Admissions Process of a Premier College", author: "Jacques Steinberg", isbn: "9781101200315" },
+  { title: "Flying Low", author: "B.K. Bryans", isbn: "" },
+  { title: "The Singing Neanderthals: The Origins of Music, Language, Mind, and Body", author: "Steven Mithen", isbn: "9780674021921" },
+  { title: "Programming Scala: Tackle Multicore Complexity on the JVM", author: "Venkat Subramaniam", isbn: "9781934356319" },
+  { title: "Red Storm Rising and The Hunt For Red October Clancy, 2 volume, boxed set", author: "Tom Clancy", isbn: "9780425105993" },
+  { title: "The Hunt for Red October (Jack Ryan, #3)", author: "Tom Clancy", isbn: "9780425172902" },
+  { title: "America (The Book): A Citizen's Guide to Democracy Inaction", author: "Jon Stewart", isbn: "9780713998948" },
+  { title: "Contacting Aliens: An Illustrated Guide to David Brin's Uplift Universe (The Uplift Saga)", author: "David Brin", isbn: "9780553377965" },
+  { title: "Otherness", author: "David Brin", isbn: "9780553295283" },
+  { title: "The Name of the Wind (The Kingkiller Chronicle, #1)", author: "Patrick Rothfuss", isbn: "9780756404079" },
+  { title: "Xenocide (Ender's Saga, #3)", author: "Orson Scott Card", isbn: "9780312861872" },
+  { title: "Ender's Shadow (The Shadow Series, #1)", author: "Orson Scott Card", isbn: "9780765342409" },
+  { title: "Speaker for the Dead (Ender's Saga, #2)", author: "Orson Scott Card", isbn: "9780812550757" },
+  { title: "Ender’s Game (Ender's Saga, #1)", author: "Orson Scott Card", isbn: "9780812550702" },
+  { title: "Chapterhouse: Dune (Dune #6)", author: "Frank Herbert", isbn: "" },
+  { title: "Heretics of Dune (Dune #5)", author: "Frank Herbert", isbn: "9780441328000" },
+  { title: "God Emperor of Dune (Dune #4)", author: "Frank Herbert", isbn: "9780575075061" },
+  { title: "Children of Dune (Dune #3)", author: "Frank Herbert", isbn: "" },
+  { title: "Dune Messiah (Dune, #2)", author: "Frank Herbert", isbn: "9780441172696" },
+  { title: "Dune (Dune, #1)", author: "Frank Herbert", isbn: "9780340839935" },
+  { title: "Prelude to Foundation (Foundation, #6)", author: "Isaac Asimov", isbn: "" },
+  { title: "The Caves of Steel (Robot, #1)", author: "Isaac Asimov", isbn: "" },
+  { title: "The Forever War (The Forever War, #1)", author: "Joe Haldeman", isbn: "" },
+  { title: "I, Robot (Robot, #0.1)", author: "Isaac Asimov", isbn: "9780553803709" },
+  { title: "Foundation (Foundation, #1)", author: "Isaac Asimov", isbn: "9780553803716" },
+  { title: "Metamagical Themas: Questing for the Essence of Mind and Pattern", author: "Douglas R. Hofstadter", isbn: "9780465045662" },
+  { title: "A History of the World in 6 Glasses", author: "Tom Standage", isbn: "9780802715524" },
+  { title: "Glory Season", author: "David Brin", isbn: "9780553567670" },
+  { title: "Small Favor (The Dresden Files, #10)", author: "Jim Butcher", isbn: "9780451461896" },
+  { title: "White Night (The Dresden Files, #9)", author: "Jim Butcher", isbn: "9780451461407" },
+  { title: "Proven Guilty (The Dresden Files, #8)", author: "Jim Butcher", isbn: "9780451461032" },
+  { title: "Blood Rites (The Dresden Files, #6)", author: "Jim Butcher", isbn: "9780451459879" },
+  { title: "Summer Knight (The Dresden Files, #4)", author: "Jim Butcher", isbn: "9780451458926" },
+  { title: "Grave Peril (The Dresden Files, #3)", author: "Jim Butcher", isbn: "" },
+  { title: "Fool Moon (The Dresden Files, #2)", author: "Jim Butcher", isbn: "9780451458124" },
+  { title: "Infinity's Shore (Uplift Storm Trilogy, #2)", author: "David Brin", isbn: "9780553577778" },
+  { title: "Earth", author: "David Brin", isbn: "9780553290240" },
+  { title: "Kiln People", author: "David Brin", isbn: "9780765342614" },
+  { title: "Heaven's Reach (Uplift Storm Trilogy, #3)", author: "David Brin", isbn: "9780553574739" },
+  { title: "Brightness Reef (Uplift Storm Trilogy, #1)", author: "David Brin", isbn: "9780553573305" },
+  { title: "Sundiver (The Uplift Saga, #1)", author: "David Brin", isbn: "9780553269826" },
+  { title: "The Uplift War (The Uplift Saga, #3)", author: "David Brin", isbn: "9780553279719" },
+  { title: "Startide Rising (The Uplift Saga, #2)", author: "David Brin", isbn: "9780553274189" },
+  { title: "The Postman", author: "David Brin", isbn: "9780553278743" },
+  { title: "Storm Front (The Dresden Files, #1)", author: "Jim Butcher", isbn: "9780451457813" },
+  { title: "A Wizard of Earthsea (Earthsea Cycle, #1)", author: "Ursula K. Le Guin", isbn: "" },
+  { title: "The Hunger Games (The Hunger Games, #1)", author: "Suzanne Collins", isbn: "9780439023481" },
+  { title: "The Last Unicorn (The Last Unicorn, #1)", author: "Peter S. Beagle", isbn: "" },
+  { title: "American Gods (American Gods, #1)", author: "Neil Gaiman", isbn: "" },
+  { title: "The Princess Bride", author: "William Goldman", isbn: "9780345418265" },
+  { title: "Twilight (Twilight Saga, #1)", author: "Stephenie Meyer", isbn: "9780316015844" },
+];
+
+const PALETTES = [
+  { bg: '#1a3a5c', text: '#e8d5a3', accent: '#c9a84c' },
+  { bg: '#3d1f0d', text: '#f0e6d0', accent: '#d4a96a' },
+  { bg: '#1e3d2f', text: '#e8f0e4', accent: '#8fbc8f' },
+  { bg: '#2d1b4e', text: '#e8dff5', accent: '#b09ad4' },
+  { bg: '#4a1f1f', text: '#f5e8d8', accent: '#cc8866' },
+  { bg: '#1f3545', text: '#d8eaf5', accent: '#6a9fc0' },
+  { bg: '#2f3b1a', text: '#e8f0d8', accent: '#a0b870' },
+  { bg: '#4a3520', text: '#f5ead8', accent: '#d4a870' },
+  { bg: '#1a2a3a', text: '#d8e8f5', accent: '#708aaa' },
+  { bg: '#3a2040', text: '#f0e8f8', accent: '#c090d8' },
+  { bg: '#1a3020', text: '#d8f0e0', accent: '#70a880' },
+  { bg: '#3a1a10', text: '#f8e8d8', accent: '#d08060' },
+];
+
+function bookWidth(title) {
+  const base = 26 + (title.length % 7) * 3;
+  return Math.max(22, Math.min(52, base));
+}
+function bookHeight() {
+  return 100 + Math.floor(Math.random() * 55);
+}
+function parseBooks(text) {
+  return text.trim().split('\n')
+    .map(l => l.trim()).filter(Boolean)
+    .map(l => {
+      const parts = l.split('|');
+      return { title: parts[0].trim(), author: (parts[1] || '').trim(), isbn: '' };
+    });
+}
+function hashCode(str) {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+  return Math.abs(h);
+}
+function shadeColor(hex, pct) {
+  const num = parseInt(hex.slice(1), 16);
+  const r = Math.min(255, Math.max(0, (num >> 16) + pct * 2));
+  const g = Math.min(255, Math.max(0, ((num >> 8) & 0xff) + pct * 2));
+  const b = Math.min(255, Math.max(0, (num & 0xff) + pct * 2));
+  return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+}
+
+// ── COVER MODAL ──────────────────────────────────────────────
+const overlay   = document.getElementById('cover-overlay');
+const coverImg  = document.getElementById('cover-img');
+const spinner   = document.getElementById('cover-spinner');
+const fallback  = document.getElementById('cover-fallback');
+const imgWrap   = document.getElementById('cover-image-wrap');
+
+overlay.addEventListener('click', closeModal);
+
+function closeModal() {
+  overlay.classList.remove('visible');
+  coverImg.classList.remove('loaded');
+  coverImg.src = '';
+}
+
+// ── COVER FETCH STRATEGY ──────────────────────────────────────
+// Waterfall: 
+//   1. Google Books by ISBN (most precise)
+//   2. Google Books by cleaned title + author text search
+//   3. Open Library by ISBN
+//   4. Open Library by title+author search
+//   5. Styled fallback card
+
+// Strip series info like "(Dune, #1)" or "(The Dresden Files, #14)" from title
+function cleanTitle(title) {
+  return title.replace(/\s*\([^)]*#[^)]*\)/g, '').trim();
+}
+
+async function googleBooksQuery(q) {
+  const url = `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(q)}&maxResults=1&fields=items(volumeInfo/title,volumeInfo/authors,volumeInfo/imageLinks,volumeInfo/description,volumeInfo/publishedDate)`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Google Books HTTP ${res.status}`);
+  const data = await res.json();
+  return data.items && data.items[0] ? data.items[0].volumeInfo : null;
+}
+
+async function openLibraryQuery(q, byIsbn=false) {
+  const url = byIsbn
+    ? `https://openlibrary.org/api/books?bibkeys=ISBN:${q}&format=json&jscmd=data`
+    : `https://openlibrary.org/search.json?q=${encodeURIComponent(q)}&limit=1&fields=cover_i,first_publish_year`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Open Library HTTP ${res.status}`);
+  return await res.json();
+}
+
+function extractGoogleCoverUrl(info) {
+  if (!info || !info.imageLinks) return null;
+  const raw = info.imageLinks.extraLarge || info.imageLinks.large || info.imageLinks.medium || info.imageLinks.thumbnail;
+  if (!raw) return null;
+  return raw.replace('http://', 'https://').replace('zoom=1', 'zoom=3').replace('&edge=curl', '');
+}
+
+async function openBookModal(book) {
+  // Reset
+  coverImg.classList.remove('loaded');
+  coverImg.src = '';
+  spinner.style.display = 'flex';
+  fallback.style.display = 'none';
+
+  document.getElementById('modal-title').textContent = book.title;
+  document.getElementById('modal-author').textContent = book.author || '';
+  document.getElementById('modal-desc').textContent = 'Fetching cover…';
+
+  const palette = PALETTES[hashCode(book.title) % PALETTES.length];
+  imgWrap.style.background = `linear-gradient(160deg, ${shadeColor(palette.bg,-10)} 0%, ${palette.bg} 60%, ${shadeColor(palette.bg,15)} 100%)`;
+  overlay.classList.add('visible');
+
+  // ── Cache hit: skip all fetching, display immediately ──
+  if (coverCache.has(book.title)) {
+    const cached = coverCache.get(book.title);
+    spinner.style.display = 'none';
+    if (cached) {
+      coverImg.src = cached;
+      requestAnimationFrame(() => requestAnimationFrame(() => coverImg.classList.add('loaded')));
+    } else {
+      showFallback(book, palette);
+    }
+    document.getElementById('modal-desc').textContent = 'Loading details…';
+    // Still fetch metadata for description in background
+    (async () => {
+      const clean = cleanTitle(book.title);
+      try {
+        const info = book.isbn
+          ? await googleBooksQuery(`isbn:${book.isbn}`)
+          : await googleBooksQuery(`${clean} ${book.author || ''}`);
+        if (info) document.getElementById('modal-desc').textContent = buildDesc(info, book) || 'No description found.';
+      } catch(e) {}
+    })();
+    return;
+  }
+
+  const clean = cleanTitle(book.title);
+  const coverUrls = [];
+  let descText = '';
+
+  // ── Step 1: Google Books by ISBN ──
+  if (book.isbn) {
+    try {
+      const info = await googleBooksQuery(`isbn:${book.isbn}`);
+      if (info) {
+        const u = extractGoogleCoverUrl(info);
+        if (u) coverUrls.push(u);
+        descText = buildDesc(info, book);
+      }
+    } catch(e) { console.warn('Google ISBN lookup failed:', e.message); }
+  }
+
+  // ── Step 2: Google Books by cleaned title + author ──
+  if (coverUrls.length === 0) {
+    try {
+      const q = `${clean}${book.author ? ' ' + book.author : ''}`;
+      const info = await googleBooksQuery(q);
+      if (info) {
+        const u = extractGoogleCoverUrl(info);
+        if (u) coverUrls.push(u);
+        if (!descText) descText = buildDesc(info, book);
+      }
+    } catch(e) { console.warn('Google text search failed:', e.message); }
+  }
+
+  // ── Step 3: Open Library by ISBN ──
+  if (book.isbn) {
+    try {
+      const data = await openLibraryQuery(book.isbn, true);
+      const key = `ISBN:${book.isbn}`;
+      if (data[key] && data[key].cover) {
+        const u = (data[key].cover.large || data[key].cover.medium || '').replace('http://', 'https://');
+        if (u) coverUrls.push(u);
+      }
+    } catch(e) { console.warn('OL ISBN lookup failed:', e.message); }
+  }
+
+  // ── Step 4: Open Library by title+author search ──
+  try {
+    const q = `${clean}${book.author ? ' ' + book.author : ''}`;
+    const data = await openLibraryQuery(q, false);
+    const doc = data.docs && data.docs[0];
+    if (doc && doc.cover_i) {
+      coverUrls.push(`https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg`);
+      if (!descText && doc.first_publish_year) descText = `First published ${doc.first_publish_year}.`;
+    }
+  } catch(e) { console.warn('OL search failed:', e.message); }
+
+  document.getElementById('modal-desc').textContent = descText || 'No description found.';
+
+  // Deduplicate URLs
+  const uniqueUrls = [...new Set(coverUrls.filter(Boolean))];
+  const resolvedUrl = await tryImageUrls(uniqueUrls);
+
+  if (resolvedUrl) {
+    spinner.style.display = 'none';
+    fallback.style.display = 'none';
+    coverImg.src = resolvedUrl;
+    requestAnimationFrame(() => requestAnimationFrame(() => coverImg.classList.add('loaded')));
+  } else {
+    showFallback(book, palette);
+  }
+}
+
+function buildDesc(info, book) {
+  const year = info.publishedDate ? info.publishedDate.slice(0,4) : '';
+  const shortDesc = info.description
+    ? info.description.replace(/<[^>]+>/g, '').slice(0, 220) + (info.description.length > 220 ? '…' : '')
+    : '';
+  if (info.authors && info.authors.length && !book.author) {
+    document.getElementById('modal-author').textContent = info.authors[0];
+  }
+  return [year ? `Published ${year}.` : '', shortDesc].filter(Boolean).join(' ') || '';
+}
+
+function showFallback(book, palette) {
+  spinner.style.display = 'none';
+  coverImg.src = '';
+  fallback.style.display = 'flex';
+  fallback.innerHTML = `
+    <div class="fb-title" style="color:${palette.text}">${book.title}</div>
+    <div class="fb-rule" style="background:${palette.accent}88"></div>
+    ${book.author ? `<div class="fb-author" style="color:${palette.accent}">${book.author}</div>` : ''}
+  `;
+}
+
+// ── BUILD BOOKS ──────────────────────────────────────────────
+function buildBook(book) {
+  const palette = PALETTES[hashCode(book.title) % PALETTES.length];
+  const width   = bookWidth(book.title);
+  const height  = bookHeight();
+
+  const el = document.createElement('div');
+  el.className = 'book';
+  el.style.cssText = `width:${width}px; height:${height}px;`;
+
+  const spine = document.createElement('div');
+  spine.className = 'book-spine';
+  const bg = palette.bg;
+  spine.style.background = `linear-gradient(to right,
+    ${shadeColor(bg,-20)} 0%, ${bg} 30%,
+    ${shadeColor(bg,10)} 70%, ${shadeColor(bg,-10)} 100%)`;
+
+  const titleEl = document.createElement('div');
+  titleEl.className = 'book-title';
+  titleEl.style.color = palette.text;
+  titleEl.textContent = book.title;
+
+  const accentEl = document.createElement('div');
+  accentEl.className = 'book-accent';
+  accentEl.style.background = palette.accent + '55';
+
+  spine.appendChild(titleEl);
+  spine.appendChild(accentEl);
+
+  if (book.author) {
+    const authorEl = document.createElement('div');
+    authorEl.className = 'book-author';
+    authorEl.style.color = palette.accent;
+    authorEl.textContent = book.author;
+    spine.appendChild(authorEl);
+  }
+
+  el.appendChild(spine);
+
+  // Click → open modal
+  el.addEventListener('click', (e) => {
+    e.stopPropagation();
+    openBookModal(book);
+  });
+
+  return el;
+}
+
+function buildDecor(type) {
+  const wrap = document.createElement('div');
+  wrap.className = 'decor';
+  if (type === 'bookend') {
+    const be = document.createElement('div');
+    be.className = 'bookend';
+    wrap.appendChild(be);
+  } else if (type === 'candle') {
+    const cw = document.createElement('div');
+    cw.className = 'candle-wrap';
+    cw.innerHTML = `<div class="candle-body"></div><div class="candle-flame"></div>`;
+    wrap.appendChild(cw);
+  } else if (type === 'plant') {
+    const pw = document.createElement('div');
+    pw.className = 'plant';
+    pw.innerHTML = `
+      <div class="plant-pot"></div>
+      <div class="plant-leaf" style="width:18px;height:28px;bottom:14px;left:6px;transform:rotate(-20deg);background:#2d6a1e;position:absolute;border-radius:50% 0;"></div>
+      <div class="plant-leaf" style="width:16px;height:24px;bottom:20px;left:10px;transform:rotate(30deg);background:#3a8025;position:absolute;border-radius:50% 0;"></div>
+      <div class="plant-leaf" style="width:14px;height:20px;bottom:28px;left:4px;transform:rotate(-50deg);background:#256015;position:absolute;border-radius:50% 0;"></div>`;
+    wrap.appendChild(pw);
+  }
+  return wrap;
+}
+
+function buildShelf(books) {
+  const unit = document.getElementById('shelf-unit');
+  unit.innerHTML = '';
+
+  const NUM_ROWS = 4;
+  const PER_ROW = Math.ceil(books.length / NUM_ROWS);
+  const shuffled = [...books].sort((a,b) => {
+    const authorA = (a.author || '').toLowerCase();
+    const authorB = (b.author || '').toLowerCase();
+    if (authorA < authorB) return -1;
+    if (authorA > authorB) return 1;
+    return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
+  });
+  const rows = Array.from({length: NUM_ROWS}, (_, i) => shuffled.slice(i * PER_ROW, (i+1) * PER_ROW));
+
+  rows.forEach((rowBooks, rowIdx) => {
+    const row = document.createElement('div');
+    row.className = 'shelf-row';
+    const bookRow = document.createElement('div');
+    bookRow.className = 'book-row';
+
+    bookRow.appendChild(buildDecor('bookend'));
+    rowBooks.forEach((book, i) => {
+      bookRow.appendChild(buildBook(book));
+      if (i === Math.floor(rowBooks.length * 0.3) && rowIdx === 0) bookRow.appendChild(buildDecor('candle'));
+      if (i === Math.floor(rowBooks.length * 0.6) && rowIdx === 1) bookRow.appendChild(buildDecor('plant'));
+      if (i === Math.floor(rowBooks.length * 0.5) && rowIdx === 2) bookRow.appendChild(buildDecor('candle'));
+      if (i === Math.floor(rowBooks.length * 0.4) && rowIdx === 3) bookRow.appendChild(buildDecor('plant'));
+    });
+    bookRow.appendChild(buildDecor('bookend'));
+
+    const plank = document.createElement('div');
+    plank.className = 'shelf-plank';
+    row.appendChild(bookRow);
+    row.appendChild(plank);
+    unit.appendChild(row);
+  });
+}
+
+function toggleEdit() {
+  document.getElementById('edit-panel').classList.toggle('open');
+}
+function applyBooks() {
+  const raw = document.getElementById('book-input').value;
+  const books = parseBooks(raw);
+  if (books.length > 0) buildShelf(books);
+  document.getElementById('edit-panel').classList.remove('open');
+}
+
+// Init
+const defaultText = DEFAULT_BOOKS.map(b => `${b.title} | ${b.author}`).join('\n');
+document.getElementById('book-input').value = defaultText;
+buildShelf(DEFAULT_BOOKS);
+
+// Start background prefetch after shelf renders
+prefetchAll(DEFAULT_BOOKS);
+
+// ── COVER CACHE ──────────────────────────────────────────────
+// Keyed by book title. Value: resolved image URL string, or null if not found.
+const coverCache = new Map();
+
+// Prefetch one book: run the full waterfall but don't display anything
+async function prefetchBook(book) {
+  const key = book.title;
+  if (coverCache.has(key)) return; // already done
+
+  const clean = cleanTitle(book.title);
+  const urls = [];
+
+  try {
+    if (book.isbn) {
+      const info = await googleBooksQuery(`isbn:${book.isbn}`);
+      if (info) { const u = extractGoogleCoverUrl(info); if (u) urls.push(u); }
+    }
+  } catch(e) {}
+
+  if (!urls.length) {
+    try {
+      const info = await googleBooksQuery(`${clean}${book.author ? ' ' + book.author : ''}`);
+      if (info) { const u = extractGoogleCoverUrl(info); if (u) urls.push(u); }
+    } catch(e) {}
+  }
+
+  if (book.isbn) {
+    try {
+      const data = await openLibraryQuery(book.isbn, true);
+      const key2 = `ISBN:${book.isbn}`;
+      if (data[key2] && data[key2].cover) {
+        const u = (data[key2].cover.large || data[key2].cover.medium || '').replace('http://', 'https://');
+        if (u) urls.push(u);
+      }
+    } catch(e) {}
+  }
+
+  try {
+    const data = await openLibraryQuery(`${clean}${book.author ? ' ' + book.author : ''}`, false);
+    const doc = data.docs && data.docs[0];
+    if (doc && doc.cover_i) urls.push(`https://covers.openlibrary.org/b/id/${doc.cover_i}-L.jpg`);
+  } catch(e) {}
+
+  // Find first URL whose image actually loads
+  const resolved = await tryImageUrls([...new Set(urls.filter(Boolean))]);
+  coverCache.set(key, resolved || null);
+
+  // Also preload the image into browser cache if found
+  if (resolved) {
+    const img = new Image();
+    img.src = resolved;
+  }
+}
+
+// Run prefetch across all books with concurrency limit so we don't
+// hammer the APIs — 3 at a time, small delay between batches
+async function prefetchAll(books) {
+  const CONCURRENCY = 3;
+  const BATCH_DELAY_MS = 400;
+
+  // Start after a short delay so the shelf renders first
+  await new Promise(r => setTimeout(r, 1500));
+
+  for (let i = 0; i < books.length; i += CONCURRENCY) {
+    const batch = books.slice(i, i + CONCURRENCY);
+    await Promise.all(batch.map(b => prefetchBook(b)));
+    if (i + CONCURRENCY < books.length) {
+      await new Promise(r => setTimeout(r, BATCH_DELAY_MS));
+    }
+  }
+}
+
+// tryImageUrls needs to be accessible at module scope (moved out of openBookModal)
+function tryImageUrls(urls) {
+  return new Promise((resolve) => {
+    if (!urls.length) { resolve(null); return; }
+    const [first, ...rest] = urls;
+    const img = new Image();
+    img.onload = () => resolve(first);
+    img.onerror = () => tryImageUrls(rest).then(resolve);
+    img.src = first;
+  });
+}
+
+// ── DRAG TO SCROLL ──
+const room = document.getElementById('room');
+let isDragging = false, startX = 0, scrollLeft = 0;
+
+room.addEventListener('mousedown', e => {
+  if (e.target.closest('.book') || e.target.closest('#edit-panel') || e.target.closest('#edit-toggle') || e.target.closest('#cover-overlay')) return;
+  isDragging = true;
+  startX = e.pageX - room.offsetLeft;
+  scrollLeft = room.scrollLeft;
+  room.classList.add('grabbing');
+});
+room.addEventListener('mouseleave', () => { isDragging = false; room.classList.remove('grabbing'); });
+room.addEventListener('mouseup', () => { isDragging = false; room.classList.remove('grabbing'); });
+room.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - room.offsetLeft;
+  room.scrollLeft = scrollLeft - (x - startX) * 1.2;
+});
+
+// Touch support
+room.addEventListener('touchstart', e => {
+  startX = e.touches[0].pageX;
+  scrollLeft = room.scrollLeft;
+}, { passive: true });
+room.addEventListener('touchmove', e => {
+  const x = e.touches[0].pageX;
+  room.scrollLeft = scrollLeft - (x - startX);
+}, { passive: true });
+
+// Scroll hint arrow
+const hint = document.createElement('div');
+hint.id = 'scroll-hint';
+hint.innerHTML = '&#8592; drag to browse &nbsp; &#8594;';
+document.body.appendChild(hint);
+room.addEventListener('scroll', () => {
+  hint.style.opacity = room.scrollLeft > 40 ? '0' : '0.5';
+}, { passive: true });
+</script>
+</body>
+</html>
