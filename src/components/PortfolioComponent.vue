@@ -1183,7 +1183,7 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
 
         <img src="img/presentations/NY_Summit_Speaker.jpg" height="300" width="355"/><br>
         <a href="https://www.youtube.com/watch?v=XuiX-IprZ-8">AWS New York Summit Keynote Recap</a><br><br>
-        <br><br>We had a packed house for our summit talk, and we got the top CSAT score<br>
+        <br><br>We had a packed house for our summit talk on AgentCore, and we got the top CSAT score<br>
         <img src="img/presentations/NYSummit_talk1.jpg" height="200" width="300" style="margin: 20px;">
         <img src="img/presentations/NYSummit_talk2.jpg" height="200" width="300" style="margin: 20px;">
         <br><br>
@@ -1656,3 +1656,27 @@ export default {
   components: { MagnificPopUpVue, ModalBox },
 };
 </script>
+
+<style>
+.popup_details {
+  width: min(92vw, 1400px);
+  max-width: min(92vw, 1400px);
+}
+
+.popup_details .main_details {
+  width: 100%;
+  max-width: 100%;
+}
+
+.popup_details .main_details img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .popup_details {
+    width: 96vw;
+    max-width: 96vw;
+  }
+}
+</style>
