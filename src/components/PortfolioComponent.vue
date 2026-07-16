@@ -1181,6 +1181,9 @@ arbitrary and appropriate and much too complex for the humans.<br><br>
         <div class="main_details">
           <div class="portfolio_main_title" style="background-image: linear-gradient(to bottom right, white, grey)">
 
+        <img src="img/presentations/NY_Summit_Speaker.jpg" height="250" width="355"/><br>
+        <a href="https://www.youtube.com/watch?v=XuiX-IprZ-8">AWS New York Summit Keynote Recap</a><br><br>
+
 
         <img src="img/presentations/reinvent2025/reinvent.png" height="300" width="400" style="margin: 20px;">
         <br>Gave DEV317 Red Team vs. Blue Team, Securing AI Avents<br>
