@@ -22,7 +22,7 @@
             </div>
             <div class="text">
               <p>
-                Based in the ever-evolving world of technology, I have dedicated four decades to mastering my craft in software development. With a particular passion for Amazon Web Services (AWS), I have spent the last decade immersing myself in this domain, becoming a recognized authority in architecting and implementing cloud solutions.
+Software development has been my craft for four decades. Ten years ago, AWS became my focus, and that focus has grown into deep expertise: I now architect and implement cloud solutions at an expert level, recognized across the field.
               </p>
             </div>
             <div class="button">

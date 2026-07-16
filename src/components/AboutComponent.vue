@@ -33,19 +33,16 @@
             </div>
             <div class="text wow fadeInUp" data-wow-duration="1s">
               <p>
-                Brian Tarbox is a highly experienced and accomplished software developer with a remarkable programming journey spanning a long time. With a strong foundation built over 40 years of coding expertise, including a decade dedicated to Amazon Web Services (AWS), Brian has honed his skills and become a recognized authority in the field. His deep knowledge and proficiency in AWS services have made him a valuable asset in architecting and implementing cloud solutions.
                 <br/><br/>
-                Brian has a Master's degree in Cognitive Pyschology from the University of Hawaii at Manoa where he studied "language" learning in bottlenosed Dolphins.
+Brian Tarbox has been writing software for 40 years, the last decade of it focused on AWS. He's an AWS Community Hero, AWS Ambassador, and Alexa Champion, and works today as a Principal Solutions Architect helping companies design and build cloud systems that hold up in production.
                 <br/><br/>
-                He also has BA from Wesleyan University in Linguistic Philosophy.
+His background isn't the usual path into tech. Brian holds a Master's in Cognitive Psychology from the University of Hawai'i at Mānoa, where he studied language learning in bottlenose dolphins, and a BA in Linguistic Philosophy from Wesleyan University. That combination, the study of how minds and language actually work, shapes how he thinks about systems, communication, and now AI: he's currently applying Gricean pragmatics to how large language models handle ambiguity.
+
                 <br/><br/>
-                Beyond his technical prowess, Brian has embraced a profound commitment to diversity, inclusion, and giving back to the community. With a genuine passion for fostering an inclusive tech industry, he actively advocates for equal opportunities and the empowerment of underrepresented groups. Brian's dedication to these principles is evident in his numerous initiatives, where he champions diversity and strives to create a welcoming environment for all.
+Outside of architecture work, Brian leads Caylent's Neurodiversity Employee Resource Group and mentors underrepresented engineers through the AWS New Voices program. He speaks regularly at conferences, writes technical articles, and holds ten US patents. He's also a private pilot, rescue scuba diver, and musician who's spent a fair amount of time turning AWS telemetry into music (ask him about the CloudWatch Sonifier sometime).
                 <br/>
+This site is where he writes about all of it: cloud architecture, AI, cognitive science, and the occasional dolphin.
                 <br/>
-                As a mentor and educator, Brian shares his wealth of knowledge with aspiring developers, delivering impactful workshops, speaking engagements, and authoring insightful articles. His ability to inspire others and provide guidance in their coding journeys has made him a sought-after resource within the industry.
-                <br/>
-                <br/>
-                With a strong sense of purpose and an unwavering focus on making a positive impact, Brian Tarbox combines his extensive technical background with his deep-rooted values of diversity, inclusion, and community support. His personal website serves as a platform to share his expertise, engage with fellow professionals, and contribute to the ongoing dialogue surrounding these critical topics. Through his leadership, Brian continues to drive positive change, leaving a lasting legacy in the technology landscape.
               </p>
             </div>
             <div class="dizme_tm_button wow fadeInUp" data-wow-duration="1s">
