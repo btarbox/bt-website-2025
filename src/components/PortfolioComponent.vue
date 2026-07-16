@@ -1658,25 +1658,25 @@ export default {
 </script>
 
 <style>
-.popup_details {
-  width: min(92vw, 1400px);
-  max-width: min(92vw, 1400px);
+div.dizme_tm_section div.popup_details.popup_details {
+  width: min(92vw, 1400px) !important;
+  max-width: min(92vw, 1400px) !important;
 }
 
-.popup_details .main_details {
-  width: 100%;
-  max-width: 100%;
+div.dizme_tm_section div.popup_details.popup_details div.main_details {
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
-.popup_details .main_details img {
-  max-width: 100%;
-  height: auto;
+div.dizme_tm_section div.popup_details.popup_details div.main_details img {
+  max-width: 100% !important;
+  height: auto !important;
 }
 
 @media (max-width: 768px) {
-  .popup_details {
-    width: 96vw;
-    max-width: 96vw;
+  div.dizme_tm_section div.popup_details.popup_details {
+    width: 96vw !important;
+    max-width: 96vw !important;
   }
 }
 </style>
