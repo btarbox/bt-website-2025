@@ -1396,7 +1396,19 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
           <img src="img/presentations/BrianBookCover.png" width="300" height="300">
           <br>Explore what happens when a neurodivergent engineer who once did language research with dolphins tries to explain what everyone in the AI industry is getting wrong — and why it matters more than the demos suggest.
         </a>
+
+
         <br><br>
+           <a class="tooltip-link" href="https://dev.to/aws-heroes/vibe-coding-is-3d-printed-steak-i5b " 
+              data-tooltip="Vibe Coding is like 3D Printed Steak">
+           Vibe Coding is like 3D Printed Steak</a>
+        <br><br>
+
+           <a class="tooltip-link" href="https://dev.to/aws-heroes/i-asked-claude-to-rebuild-a-1977-wargame-it-took-20-minutes-5a5b" 
+              data-tooltip="Claude created an old 1970s video game I loved">
+           Claude created an old 1970s video game I loved</a>
+        <br><br>
+
            <a class="tooltip-link" href="https://caylent.com/blog/why-flat-tool-architectures-fail-and-how-amazon-bedrock-agent-core-enables-production-grade" 
               data-tooltip="As enterprise AI systems scale, flat tool architectures create complexity, cost, and security risks. Explore how hierarchical architectures with Amazon Bedrock AgentCore solve the problem.">
            Why Flat Tool Architectures Fail and How Amazon Bedrock AgentCore Enables Production-Grade</a>
