@@ -1399,6 +1399,7 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
 
 
         <br><br>
+           <img src="/img/VibeCodingSteak.png" alt="" />
            <a class="tooltip-link" href="https://dev.to/aws-heroes/vibe-coding-is-3d-printed-steak-i5b " 
               data-tooltip="Vibe Coding is like 3D Printed Steak, it looks good on the outside who knows what going on inside it">
            November 2026, Vibe Coding is like 3D Printed Steak</a>
@@ -1406,13 +1407,19 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
 
            <a class="tooltip-link" href="https://dev.to/aws-heroes/i-asked-claude-to-rebuild-a-1977-wargame-it-took-20-minutes-5a5b" 
               data-tooltip="Claude created an old 1970s video game I loved, and it only took 20 minutes and now I've lost several evening to playing it again!">
-           Claude created an old 1970s video game I loved</a>
+           November 2026 Claude created an old 1970s video game I loved</a>
+        <br><br>
+
+           <a class="tooltip-link" href="https://dev.to/aws-heroes/rent-the-job-own-the-life-12g3" 
+              data-tooltip="Work is like renting an apartment (temporary) and life is like owning a house (permenent-ish)">
+           November 2026 Rent the job but own the life</a>
         <br><br>
 
            <a class="tooltip-link" href="https://dev.to/aws-heroes/using-ai-for-anonymity-1adb" 
               data-tooltip="If you are filling in a company survey you might want GenAI to make your comments actually anonymous">
-           Using Claude for anonymity</a>
+           November 2026 Using Claude for anonymity</a>
         <br><br>
+
 
            <a class="tooltip-link" href="https://caylent.com/blog/why-flat-tool-architectures-fail-and-how-amazon-bedrock-agent-core-enables-production-grade" 
               data-tooltip="As enterprise AI systems scale, flat tool architectures create complexity, cost, and security risks. Explore how hierarchical architectures with Amazon Bedrock AgentCore solve the problem.">
