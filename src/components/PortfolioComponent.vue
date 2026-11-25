@@ -1405,11 +1405,13 @@ JavaOne 2009, Programming Music for Fun and Productivity; a talk about convertin
            November 2026, Vibe Coding is like 3D Printed Steak</a>
         <br><br>
 
+           <img src="/img/AgenticInvaders.jpg" alt="" />
            <a class="tooltip-link" href="https://dev.to/aws-heroes/i-asked-claude-to-rebuild-a-1977-wargame-it-took-20-minutes-5a5b" 
               data-tooltip="Claude created an old 1970s video game I loved, and it only took 20 minutes and now I've lost several evening to playing it again!">
            November 2026 Claude created an old 1970s video game I loved</a>
         <br><br>
 
+           <img src="/img/WorkLifeCover.png" alt="" />
            <a class="tooltip-link" href="https://dev.to/aws-heroes/rent-the-job-own-the-life-12g3" 
               data-tooltip="Work is like renting an apartment (temporary) and life is like owning a house (permenent-ish)">
            November 2026 Rent the job but own the life</a>
